@@ -13,6 +13,12 @@
 
 <body>
     <div class="sidebar">
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
         <div class="menu">
             <div class="profile">
                 <img src="image/img.JPG" alt="profile picture">
@@ -31,7 +37,7 @@
                     <a href="#about" class="nav-item"> About Us</a>
                 </li>
                 <li>
-                    <a href="#" class="nav-item"> Portfolio</a>
+                    <a href="#projects" class="nav-item"> Portfolio</a>
 
                 </li>
                 <li>
@@ -43,9 +49,7 @@
                 <li>
                     <a href="#exp-section" class="nav-item">  Work Experience</a>
                 </li>
-                <li>
-                    <a href="#proj-section" class="nav-item"> projects</a>
-                </li>
+
 
                 <li>
                     <a href="pages/contact.html" class="nav-item"> Contact Me</a>
@@ -82,44 +86,67 @@
             <P>I'am a University student pursuing Information Technology, Passionate about programming, and looking aside for new upcoming Technologies</P>
             <p>In my free time I play football and it is my hobby, I am good at team working.</p>
             <p>By now, I am Trainee at Andela,I hate selfish and discourageous people, collaboration is my priority</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
     </div>
 
     <div id="skills-section">
-
+        <h1>Top Skills </h1>
         <div class="skills">
+
             <div class="skills-list">
                 <div class="left">
                     <h2>Front-End Skills</h2>
-                    <ul>
-                        <li>HTML</li>
-                        <i class="icon-html5"></i>
-                        <li>CSS</li>
-                        <i class="icon-css3"></i>
-                        <li>JavaScript</li>
-                        <i class="fab fa-js-square"></i>
 
-                    </ul>
+                    <div class="item">
+                        <i class="icon-html5 icon-2x"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="item">
+                        <i class="icon-css3 icon-2x"></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="item">
+                        <i class="icon-facebook icon-2x"></i>
+                        <span>JavaScript</span></div>
                 </div>
                 <div class="right">
                     <h2>Back-End Skills</h2>
-                    <ul>
-                        <li>Python</li>
-                        <i class="icon-html5"></i>
-                        <li>C#</li>
-                        <i class="icon-html5"></i>
+                    <div class="item">
+                        <i class="icon-envelope-alt icon-2x"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="item">
+                        <i class="icon-github icon-2x"></i>
+                        <span>C#</span>
+                    </div>
 
-                    </ul>
                 </div>
             </div>
             <div class="other-skills">
+
                 <h2>VCS</h2>
-                <li>Github</li>
-                <i class="icon-github"></i>
+                <div class="item">
+
+                    <i class="icon-github icon-2x"></i>
+                    <span>Github</span>
+                </div>
+                <div class="language">
+                    <h2>Other Skills And Languages</h2>
+                    <ul>
+                        <li>C& c++ : Basics</li>
+                        <li>Languages : English and Kinyarwanda(Mother Language)</li>
+                        <li>Leadership Skills</li>
+                        <li>Effective Communication Skills</li>
+                    </ul>
+
+                </div>
             </div>
         </div>
     </div>
-
 
     <!--Work Experience Section-->
     <div id="exp-section">
@@ -132,21 +159,40 @@
         <a href="#proj-section"><button>Click here to check my Projects</button></a>
     </div>
 
+    <div id="projects">
+        <h1>Portfolio</h1>
 
-    <!--project section-->
-    <div id="proj-section">
-        <div class="projects">
-            <h2> Restaurant API</h2>
-            <P>Description: This is an API developed for restaurant app that contain information about restaurants in Rwanda it has been developed using Django rest Framework , click
-                <a href="https://restowebapi.herokuapp.com/">Here</a> , to check it </P>
-            <img src="./image/CINEMANIA.png" alt="cinemania image">
-            <h2> Cinemania</h2>
-            <p>Description: This is the website developed by using python-Django, it is for entertainment where the movies are posted and users can enjoy them . Click
-                <a href="https://cinemaniaweb.herokuapp.com/">Here</a> to go!</p>
+
+        <div class="proj-section">
+
+            <div class="card">
+                <img src="./image/CINEMANIA.png" alt="cinemania image" style="width:100%">
+                <div class="container">
+                    <h2><b>Cinemania</b></h2>
+                    <h4>Description:</h4>
+                    <p>This is the website developed by using python-Django, it is for entertainment where the movies are posted and users can enjoy them . Click
+                        <a href="https://cinemaniaweb.herokuapp.com/">Here</a> to go!</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./image/api.jpg" alt="api img" style="width:100%">
+                <div class="container">
+                    <h2><b>Cinemania</b></h2>
+                    <h4>Description:</h4>
+                    <p>This is an API developed for restaurant app that contain information about restaurants in Rwanda it has been developed using Django rest Framework , click
+                        <a href="https://restowebapi.herokuapp.com/">Here</a> , to check it </p>
+                </div>
+            </div>
         </div>
     </div>
+
     <script src=" main.js ">
     </script>
 </body>
+
+</html>
+
+</html>
 
 </html>

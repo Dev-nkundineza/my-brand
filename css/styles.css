@@ -1,303 +1,393 @@
-    @import url("media.css");
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+3:wght@200&display=swap');
-    * {
-        font-family: 'Open Sans', sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .sidebar .menu {
-        background: rgb(20, 19, 19);
-        position: fixed;
-        left: 0;
-        width: 300px;
-        height: 100%;
-        padding: 20px 0;
-        color: #ffffff;
-        padding: 2%;
-    }
-    
-    .sidebar .menu .profile {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-    
-    .sidebar .menu .profile img {
-        display: block;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin: 0 auto;
-        align-items: center;
-    }
-    
-    .sidebar .menu .profile h2 {
-        margin: 10px 0 5px;
-    }
-    
-    .sidebar .menu .profile p {
-        font-size: 15px;
-        width: max-content;
-        margin-left: 0px;
-        margin-right: 10px;
-    }
-    
-    .sidebar .menu ul {
-        margin-top: 30px;
-        margin-bottom: 50px;
-    }
-    
-    .sidebar .menu ul li {
-        margin-left: 30px;
-        margin-right: 30px;
-        margin-top: 20px;
-        list-style: none;
-    }
-    
-    .sidebar .menu ul li a {
-        text-decoration: none;
-        color: white
-    }
-    
-    .sidebar .menu .social-links {
-        margin-left: 30px;
-        margin-bottom: 15px;
-    }
-    
-    .sidebar .menu i {
-        padding-right: 10px;
-        margin-top: 30px;
-    }
-    /* 
+@import url("media.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+3:wght@200&display=swap');
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.sidebar {
+    margin-top: 0;
+    /* left: - 30%; */
+    position: fixed;
+    /* width: 30%; */
+    background-color: black;
+    height: 100vh;
+}
+
+.sidebar .toggle-btn {
+    margin-left: 30%;
+    position: absolute;
+    top: 15px;
+}
+
+.sidebar .toggle-btn span {
+    display: block;
+    background-color: white;
+    width: 30px;
+    height: 5px;
+    margin: 3px;
+    display: none;
+}
+
+.sidebar .menu {
+    left: 0;
+    width: 300px;
+    height: 100%;
+    padding: 20px 0;
+    color: #ffffff;
+    padding: 2%;
+}
+
+.sidebar .menu .profile {
+    margin-left: 30px;
+}
+
+.sidebar .menu .profile img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 5%;
+    align-items: center;
+}
+
+.sidebar .menu .profile h2 {
+    margin: 10px 0 5px;
+}
+
+.sidebar .menu .profile p {
+    font-size: 15px;
+    width: max-content;
+    margin-left: 0px;
+}
+
+.sidebar .menu ul {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.sidebar .menu ul li {
+    margin-left: 30px;
+    margin-top: 20px;
+    list-style: none;
+}
+
+.sidebar .menu ul li a {
+    text-decoration: none;
+    color: white
+}
+
+.sidebar .menu .social-links {
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.sidebar .menu i {
+    padding-right: 10px;
+    margin-right: 2px;
+}
+
+
+/* 
 designing the contents to be displayed in body section */
-    
-    .home-section {
-        background-image: url('../image/background.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        align-items: center;
-        width: 100%;
-        margin: 0% 0%;
-        line-height: 40px;
-        padding-top: 10%;
-        height: 90vh;
-    }
-    
-    .home-section .intro-header {
-        width: max-content;
-        color: #ffffff;
-        padding-left: 50%;
-    }
-    
-    .home-section .intro-parag {
-        color: #00FFFF;
-        width: 400px;
-        padding-left: 50%;
-    }
-    /* design for About Section */
-    
-    .body-section {
-        height: 90vh;
-        margin-left: 300px;
-        padding: 10%;
-    }
-    
-    .body-section #about {
-        background-color: #ffffff;
-    }
-    
-    .body-section #about h2 {
-        font-weight: bold;
-        float: center;
-    }
-    
-    .body-section #about p {
-        width: 500px;
-        margin-top: 20px;
-        opacity: 100% !important;
-    }
-    /* ..............skills section........*/
-    
-    #skills-section {
-        height: 90vh;
-        margin-left: 300px;
-        padding: 10%;
-    }
-    
-    #skills-section .skills {
-        width: 100%;
-        margin-top: 0px;
-    }
-    
-    #skills-section .skills .skills-list {
-        display: flex;
-        margin-bottom: 20px;
-        color: black;
-        justify-content: space-between;
-        margin-top: 0px;
-    }
-    /*........Experience section........*/
-    
-    #exp-section {
-        margin-left: 300px;
-        background-image: url('../image/background.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 90vh;
-        padding: 10%;
-        color: #ffffff;
-        line-height: 40px;
-    }
-    
-    button {
-        background-color: #9796e4;
-        width: 100%;
-        height: 50px;
-        margin-top: 20px;
-        color: #ffffff;
-        font-size: larger;
-    }
-    /*.......section for projects..........*/
-    
-    #proj-section {
-        margin-left: 300px;
-        background-image: url('../image/background.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 90vh;
-        padding: 10%;
-        color: #ffffff;
-    }
-    
-    #proj-section .projects {
-        margin-top: 10%;
-        line-height: 40px;
-    }
-    
-    #proj-section .projects img {
-        width: 500px;
-        height: 300px;
-        margin-top: 90px;
-    }
-    
-    #proj-section .projects a {
-        text-decoration: none;
-        color: blue;
-        margin-top: 100px;
-    }
-    /* style for sign-in page*/
-    
-    .sign-form {
-        display: flex;
-        flex-direction: column;
-        background-color: #1C1919;
-        width: 50%;
-        margin: 5%;
-        border-radius: 4px;
-        margin-left: 40% !important;
-        color: #ffffff;
-    }
-    
-    .sign-form form {
-        display: flex;
-        flex-direction: column;
-        padding: 10%;
-    }
-    
-    .sign-form form h2 {
-        flex-direction: column;
-        padding: 5% 30%;
-    }
-    
-    input[type=text],
-    input[type=password],
-    input[type=email] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        border: 1px solid #ccc;
-        border-radius: 50px;
-        box-sizing: border-box;
-    }
-    
-    input[type=submit] {
-        width: 100%;
-        padding: 12px 20px;
-        border-radius: 50px;
-        box-sizing: border-box;
-        background-color: black;
-        color: #ffffff;
-        font-size: larger;
-        margin-top: 10px;
-    }
-    /* .....end of sign in style... */
-    /* .......style for contact page*/
-    
-    .social-section {
-        margin: 0% 30%;
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        width: 70%;
-        height: 90vh;
-    }
-    
-    .social-section .left {
-        margin-left: 0;
-    }
-    
-    .social-section .left h2 {
-        margin-bottom: 25px;
-        font-size: 30px;
-    }
-    
-    .social-section .left .item {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        height: 80px;
-    }
-    
-    .social-section .left .item i {
-        margin-right: 10px;
-    }
-    
-    .social-section .right {
-        width: max-content;
-        margin-left: 0%;
-        margin-left: 300px;
-    }
-    
-    .social-section .right .contact-form {
-        display: flex;
-        flex-direction: row;
-        padding: 15% 10%;
-    }
-    
-    .social-section .right .contact-form h2 {
-        margin-bottom: 15px;
-    }
-    
-    .social-section .right .contact-form form {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    
-    .address {
-        margin-left: 30%;
-    }
-    /*small devices*/
-    /* @media(max-width: 500px) {
-        .sidebar .menu {
-            background: rgb(245, 26, 26);
-            position: fixed;
-            left: 0;
-            width: 300px;
-            height: 100%;
-            padding: 20px 0;
-            color: #ffffff;
-            padding: 2%;
-            display: none;
-        }
-    } */
+
+.home-section {
+    background-image: url('../image/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    width: 100%;
+    margin: 0% 0%;
+    line-height: 40px;
+    padding-top: 10%;
+    height: 90vh;
+}
+
+.home-section .intro-header {
+    width: max-content;
+    color: #ffffff;
+    padding-left: 50%;
+}
+
+.home-section .intro-parag {
+    color: #00FFFF;
+    width: 400px;
+    padding-left: 50%;
+}
+
+
+/* design for About Section */
+
+.body-section {
+    height: 50vh;
+    margin-left: 20%;
+    padding: 10%;
+}
+
+.body-section #about {
+    background-color: #fdf7f7;
+}
+
+.body-section #about h2 {
+    font-weight: bold;
+    padding-left: 40%;
+}
+
+.address #about p {
+    width: fit-content;
+    margin-top: 20px;
+    opacity: 100% !important;
+}
+
+
+/* ..............skills section........*/
+
+#skills-section {
+    height: 90vh;
+    margin-left: 20%;
+    padding: 5% 10%;
+    /* margin-left: 10%; */
+    /* background-color: beige; */
+}
+
+#skills-section h1 {
+    margin-bottom: 20px;
+    padding-left: 40%;
+}
+
+#skills-section h2 {
+    margin-bottom: 10px;
+}
+
+#skills-section .skills {
+    width: 100%;
+    margin-top: 0px;
+}
+
+#skills-section .skills .skills-list {
+    /* background-color: #ffffff; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#skills-section .skills .skills-list .left .item {
+    display: flex;
+    margin-bottom: 20px;
+    color: black;
+    padding-top: 10px;
+}
+
+#skills-section .skills .skills-list .right .item {
+    margin-bottom: 20px;
+}
+
+#skills-section .skills .skills-list .left .item i {
+    margin-right: 10px;
+}
+
+#skills-section .skills .language {
+    margin-top: 25px;
+}
+
+#skills-section .skills .language h2 {
+    padding-left: 30%;
+}
+
+#skills-section .skills .language ul li {
+    list-style: none;
+    font-weight: 800;
+}
+
+
+/*........Experience section........*/
+
+#exp-section {
+    margin-left: 30%;
+    background-size: cover;
+    height: 100vh;
+    /* padding: 10%; */
+    color: black;
+    width: 100%;
+    line-height: 40px;
+    margin-top: 0px;
+    padding-left: 0%;
+}
+
+#exp-section p {
+    width: 50rem;
+}
+
+button {
+    background-color: #9796e4;
+    width: 50rem;
+    height: 50px;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+
+/* style for sign-in page*/
+
+.form-1 {
+    padding-top: 10%;
+}
+
+.sign-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #1C1919;
+    width: 50%;
+    border-radius: 4px;
+    margin-left: 40% !important;
+    color: #ffffff;
+}
+
+.sign-form form {
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+}
+
+.sign-form form h2 {
+    flex-direction: column;
+    padding: 5% 30%;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-color: black;
+    color: #ffffff;
+    font-size: larger;
+    margin-top: 10px;
+}
+
+
+/* .....end of sign in style... */
+
+
+/* .......style for contact page*/
+
+.social-section {
+    margin: 0% 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100vh;
+    height: 90vh;
+    padding-left: 5%;
+}
+
+.social-section .left {
+    padding-left: 0;
+}
+
+.social-section .left h2 {
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.social-section .left .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 80px;
+}
+
+.social-section .left .item i {
+    margin-right: 10px;
+}
+
+.social-section .right {
+    width: max-content;
+    margin-left: 10%;
+}
+
+.social-section .right .contact-form {
+    display: flex;
+    flex-direction: row;
+    padding: 15% 10%;
+    width: 100%;
+}
+
+.social-section .right .contact-form h2 {
+    margin-bottom: 15px;
+    top: 0;
+}
+
+.social-section .right .contact-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.social-section .right .contact-form form #input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+.address {
+    margin-left: 30%;
+}
+
+
+/* portfolio section*/
+
+#projects {
+    margin-left: 0%;
+    background-color: #f1f5f5;
+    height: 100vh;
+}
+
+#projects h1 {
+    padding: 5% 50%;
+}
+
+#projects .proj-section {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 3%;
+    padding-right: 10%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 30%;
+    margin-left: 30%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
