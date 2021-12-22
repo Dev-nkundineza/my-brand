@@ -1,109 +1,159 @@
-        .navbar {
-            height: 70px;
-            margin: 0;
-            background-color: black;
-            color: white;
-        }
-        
-        .admin-header {
-            width: 70%;
-            height: inherit;
-            margin: 0% 20% 0% 20%;
-            padding-top: 2px;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .admin-header .user {
-            padding-top: 9px;
-            padding-right: 15px;
-        }
-        
-        .admin-header .user span {
-            margin-left: 5px;
-            font-size: large;
-        }
-        
-        .admin-section {
-            height: calc(100vh - 70px);
-            display: flex;
-        }
-        
-        .admin-section .left-side-bar {
-            flex: 2;
-            background-color: #1c1919;
-        }
-        
-        .admin-section .left-side-bar ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .admin-section .left-side-bar ul li a {
-            color: aliceblue;
-            text-decoration: none;
-            padding: 18px;
-            padding-top: 18px;
-            border-bottom: 1px white;
-            font-size: larger;
-        }
-        
-        .admin-section .left-side-bar ul li a:hover {
-            background-color: aliceblue;
-            color: #1c1919;
-        }
-        
-        .admin-section .admin-content {
-            flex: 8;
-            padding: 40px 100px 100px;
-            overflow-y: scroll;
-        }
-        
-        .admin-section .admin-content .button-group .btn-bg {
-            background-color: #1c1919;
-            color: white;
-            padding: 15px;
-            margin: 10px;
-            border-radius: 10px;
-            text-decoration: none;
-            width: 20px;
-        }
-        
-        .admin-content .button-group a {
-            font-size: larger;
-        }
-        
-        .admin-content .title {
-            margin-bottom: 17px;
-            text-align: center;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 1.1rem;
-        }
-        
-        th,
-        td {
-            padding: 15px;
-            border-bottom: 1px solid black;
-            text-align: left;
-        }
-        
-        .delete {
-            color: red;
-        }
-        
-        .edit {
-            color: green;
-        }
-        
-        .publish {
-            color: rgb(47, 47, 218);
-        }
-        
-        .edit:hover {
-            : ;
-        }
+                   * {
+                       margin: 0;
+                       font-size: 25px;
+                   }
+                   
+                   .navbar {
+                       height: 70px;
+                       margin: 0;
+                       background-color: black;
+                       color: white;
+                   }
+                   
+                   .admin-header {
+                       width: 70%;
+                       height: inherit;
+                       margin: 0% 20% 0% 20%;
+                       padding-top: 0%;
+                       display: flex;
+                       justify-content: space-between;
+                   }
+                   
+                   .admin-header .user {
+                       padding-top: 0%;
+                       padding-right: 15px;
+                       margin-top: 0%;
+                       text-align: center;
+                   }
+                   
+                   .user .admin-header .user span {
+                       margin-left: 5px;
+                       font-size: large;
+                   }
+                   
+                   .admin-section {
+                       height: calc(100vh - 70px);
+                       display: flex;
+                   }
+                   
+                   .admin-section .left-side-bar {
+                       flex: 2;
+                       background-color: #1c1919;
+                   }
+                   
+                   .admin-section .left-side-bar ul {
+                       list-style: none;
+                       padding: 0;
+                       padding: 18px;
+                       margin-top: 48px;
+                   }
+                   
+                   .admin-section .left-side-bar ul li {
+                       margin-bottom: 15px;
+                       width: 100%;
+                   }
+                   
+                   .admin-section .left-side-bar ul li a {
+                       color: aliceblue;
+                       text-decoration: none;
+                       padding: 18px;
+                       border-bottom: 1px white;
+                       font-size: larger;
+                   }
+                   
+                   .admin-section .left-side-bar ul li a:hover {
+                       background-color: aliceblue;
+                       color: #1c1919;
+                   }
+                   
+                   .admin-section .admin-content {
+                       flex: 8;
+                       padding: 40px 100px 100px;
+                       overflow-y: scroll;
+                   }
+                   
+                   .admin-section .admin-content .button-group .btn-bg {
+                       background-color: #1c1919;
+                       color: white;
+                       padding: 15px;
+                       margin: 10px;
+                       border-radius: 10px;
+                       text-decoration: none;
+                       width: 20px;
+                   }
+                   
+                   .admin-content .button-group a {
+                       font-size: larger;
+                   }
+                   
+                   .admin-content .title {
+                       margin-bottom: 17px;
+                       text-align: center;
+                   }
+                   
+                   table {
+                       width: 100%;
+                       border-collapse: collapse;
+                       font-size: 1.1rem;
+                   }
+                   
+                   th,
+                   td {
+                       padding: 15px;
+                       border-bottom: 1px solid black;
+                       text-align: left;
+                   }
+                   
+                   .delete {
+                       color: red;
+                   }
+                   
+                   .edit {
+                       color: green;
+                   }
+                   
+                   .publish {
+                       color: rgb(47, 47, 218);
+                   }
+                   /*.....design of create post page*/
+                   
+                   .admin-content h2 {
+                       text-align: center;
+                       font-weight: bold;
+                       margin-top: 10%;
+                   }
+                   
+                   .admin-content form {
+                       padding-top: 15px;
+                   }
+                   
+                   form div {
+                       margin-bottom: 15px;
+                   }
+                   
+                   .admin-content {
+                       font-size: larger;
+                   }
+                   
+                   .text-input {
+                       padding: 10px 6px;
+                       border: 1px solid black;
+                       border-radius: 3px;
+                       width: 80%;
+                   }
+                   
+                   .date-input {
+                       padding: 10px 6px;
+                       border: 1px solid black;
+                       border-radius: 3px;
+                       width: 80%;
+                   }
+                   
+                   .submit-button {
+                       width: 20%;
+                       background-color: black;
+                       color: aliceblue;
+                       height: 50px;
+                       font-size: larger;
+                       border-radius: 3px;
+                   }
