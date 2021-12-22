@@ -1,0 +1,109 @@
+        .navbar {
+            height: 70px;
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+        
+        .admin-header {
+            width: 70%;
+            height: inherit;
+            margin: 0% 20% 0% 20%;
+            padding-top: 2px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .admin-header .user {
+            padding-top: 9px;
+            padding-right: 15px;
+        }
+        
+        .admin-header .user span {
+            margin-left: 5px;
+            font-size: large;
+        }
+        
+        .admin-section {
+            height: calc(100vh - 70px);
+            display: flex;
+        }
+        
+        .admin-section .left-side-bar {
+            flex: 2;
+            background-color: #1c1919;
+        }
+        
+        .admin-section .left-side-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .admin-section .left-side-bar ul li a {
+            color: aliceblue;
+            text-decoration: none;
+            padding: 18px;
+            padding-top: 18px;
+            border-bottom: 1px white;
+            font-size: larger;
+        }
+        
+        .admin-section .left-side-bar ul li a:hover {
+            background-color: aliceblue;
+            color: #1c1919;
+        }
+        
+        .admin-section .admin-content {
+            flex: 8;
+            padding: 40px 100px 100px;
+            overflow-y: scroll;
+        }
+        
+        .admin-section .admin-content .button-group .btn-bg {
+            background-color: #1c1919;
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            width: 20px;
+        }
+        
+        .admin-content .button-group a {
+            font-size: larger;
+        }
+        
+        .admin-content .title {
+            margin-bottom: 17px;
+            text-align: center;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.1rem;
+        }
+        
+        th,
+        td {
+            padding: 15px;
+            border-bottom: 1px solid black;
+            text-align: left;
+        }
+        
+        .delete {
+            color: red;
+        }
+        
+        .edit {
+            color: green;
+        }
+        
+        .publish {
+            color: rgb(47, 47, 218);
+        }
+        
+        .edit:hover {
+            : ;
+        }
