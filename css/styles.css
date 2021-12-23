@@ -10,86 +10,31 @@ body {
     overflow-x: hidden;
 }
 
-.sidebar {
-    margin-top: 0;
-    /* left: - 30%; */
-    position: fixed;
-    /* width: 30%; */
-    background-color: black;
-    height: 100vh;
+header {
+    height: 70px;
+    background-color: #1C1919;
+    padding-top: 10px;
 }
 
-.sidebar .toggle-btn {
-    margin-left: 30%;
-    position: absolute;
-    top: 15px;
+.navbar {
+    display: inline;
+    background-color: #9796e4;
 }
 
-.sidebar .toggle-btn span {
-    display: block;
-    background-color: white;
-    width: 30px;
-    height: 5px;
-    margin: 3px;
-    display: none;
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
 }
 
-.sidebar .menu {
-    left: 0;
-    width: 300px;
-    height: 100%;
-    padding: 20px 0;
-    color: #ffffff;
-    padding: 2%;
-}
-
-.sidebar .menu .profile {
-    margin-left: 30px;
-}
-
-.sidebar .menu .profile img {
-    display: block;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-left: 5%;
-    align-items: center;
-}
-
-.sidebar .menu .profile h2 {
-    margin: 10px 0 5px;
-}
-
-.sidebar .menu .profile p {
-    font-size: 15px;
-    width: max-content;
-    margin-left: 0px;
-}
-
-.sidebar .menu ul {
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.sidebar .menu ul li {
-    margin-left: 30px;
-    margin-top: 20px;
+.navbar ul li {
     list-style: none;
+    font-size: 18px;
+    padding-left: 0px;
 }
 
-.sidebar .menu ul li a {
+.navbar ul li a {
     text-decoration: none;
-    color: white
-}
-
-.sidebar .menu .social-links {
-    margin-left: 30px;
-    margin-bottom: 15px;
-}
-
-.sidebar .menu i {
-    padding-right: 10px;
-    margin-right: 2px;
+    color: white;
 }
 
 
@@ -104,8 +49,32 @@ designing the contents to be displayed in body section */
     width: 100%;
     margin: 0% 0%;
     line-height: 40px;
-    padding-top: 10%;
+    padding-top: 0%;
     height: 90vh;
+    font-size: 24px;
+}
+
+.home-section .profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: 50%;
+}
+
+.home-section .open-slide {
+    padding-left: 400px;
+    padding-top: 0%;
+    margin-top: 0%;
+    display: none;
+}
+
+.home-section .open-slide a svg {
+    background-color: aliceblue;
+    margin-top: 0;
+}
+
+.home-section .open-slide a svg rect {
+    color: #f1f5f5;
 }
 
 .home-section .intro-header {
@@ -116,7 +85,7 @@ designing the contents to be displayed in body section */
 
 .home-section .intro-parag {
     color: #00FFFF;
-    width: 400px;
+    width: 600px;
     padding-left: 50%;
 }
 
@@ -124,18 +93,27 @@ designing the contents to be displayed in body section */
 /* design for About Section */
 
 .body-section {
-    height: 50vh;
-    margin-left: 20%;
-    padding: 10%;
+    height: 100vh;
+    margin-left: 0%;
+    font-size: 20px;
+    line-height: 40px;
+    font-size: 24px;
 }
 
 .body-section #about {
     background-color: #fdf7f7;
+    height: 100%;
+    padding: 5% 10%;
+}
+
+.body-section #about p {
+    width: 80%;
 }
 
 .body-section #about h2 {
     font-weight: bold;
-    padding-left: 40%;
+    padding-bottom: 24px;
+    text-align: left;
 }
 
 .address #about p {
@@ -149,15 +127,13 @@ designing the contents to be displayed in body section */
 
 #skills-section {
     height: 90vh;
-    margin-left: 20%;
-    padding: 5% 10%;
-    /* margin-left: 10%; */
-    /* background-color: beige; */
+    padding: 10%;
+    /* background-color: #9796e4; */
 }
 
 #skills-section h1 {
     margin-bottom: 20px;
-    padding-left: 40%;
+    padding: 5% 40%;
 }
 
 #skills-section h2 {
@@ -170,10 +146,10 @@ designing the contents to be displayed in body section */
 }
 
 #skills-section .skills .skills-list {
-    /* background-color: #ffffff; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 5% 10%;
 }
 
 #skills-section .skills .skills-list .left .item {
@@ -181,6 +157,14 @@ designing the contents to be displayed in body section */
     margin-bottom: 20px;
     color: black;
     padding-top: 10px;
+}
+
+#skills-section .skills .skills-list .left span {
+    font-size: 24px;
+}
+
+#skills-section .skills .other-skills {
+    padding: 0% 10%;
 }
 
 #skills-section .skills .skills-list .right .item {
@@ -191,8 +175,12 @@ designing the contents to be displayed in body section */
     margin-right: 10px;
 }
 
+#skills-section .skills .skills-list .right span {
+    font-size: 24px;
+}
+
 #skills-section .skills .language {
-    margin-top: 25px;
+    padding-top: 5%;
 }
 
 #skills-section .skills .language h2 {
@@ -202,21 +190,23 @@ designing the contents to be displayed in body section */
 #skills-section .skills .language ul li {
     list-style: none;
     font-weight: 800;
+    font-size: 24px;
 }
 
 
 /*........Experience section........*/
 
 #exp-section {
-    margin-left: 30%;
+    margin-left: 0%;
     background-size: cover;
     height: 100vh;
-    /* padding: 10%; */
-    color: black;
+    color: white;
     width: 100%;
     line-height: 40px;
-    margin-top: 0px;
-    padding-left: 0%;
+    margin-top: 5%;
+    padding: 5% 10%;
+    font-size: 24px;
+    background-image: url('../image/background.jpg');
 }
 
 #exp-section p {
@@ -361,6 +351,7 @@ input[type=submit] {
     margin-left: 0%;
     background-color: #f1f5f5;
     height: 100vh;
+    width: 100%;
 }
 
 #projects h1 {
@@ -374,14 +365,14 @@ input[type=submit] {
     flex-direction: row;
     justify-content: space-around;
     padding-top: 3%;
-    padding-right: 10%;
+    padding-right: 20%;
 }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: 30%;
-    margin-left: 30%;
+    margin-left: 0%;
 }
 
 .card:hover {
@@ -390,4 +381,12 @@ input[type=submit] {
 
 .container {
     padding: 2px 16px;
+}
+
+.section-contact {
+    padding-left: 40%;
+}
+
+.section-contact i {
+    padding-right: 10px;
 }
