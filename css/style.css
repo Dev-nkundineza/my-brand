@@ -24,6 +24,10 @@
             width: 30%;
         }
         
+        .button-btn a {
+            width: 30%;
+        }
+        
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -175,7 +179,10 @@
                 color: white;
                 font-size: x-large;
                 width: 50%;
-                margin-right: 2px;
+                margin-right: 10px;
+            }
+            .button-btn a {
+                width: 50%;
             }
             .container {
                 display: flex;
