@@ -12,49 +12,46 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <div class="menu">
-            <div class="profile">
-                <img src="../image/img.JPG" alt="profile picture">
-                <h2>NKUNDINEZA DAVID</h2>
-                <P>A Software Developer: Andela Trainee</p>
-            </div>
 
+    <header>
 
+        <nav class="navbar">
             <!--Add a list of menu-->
+            <div class="openMenu"><i class="icon-reorder icon-2x" onclick="show()"></i></div>
 
-            <ul>
+            <ul class="mainMenu">
                 <li>
-                    <a href="../index.html" class="nav-item"> Home</a>
+                    <a href="#" class="nav-item"> Home</a>
                 </li>
                 <li>
                     <a href="#about" class="nav-item"> About Us</a>
                 </li>
                 <li>
-                    <a href="#../index.html?#proj-section" class="nav-item"> Portfolio</a>
+                    <a href="#projects" class="nav-item"> Portfolio</a>
 
                 </li>
                 <li>
                     <a href="#" class="nav-item"> Blogs</a>
                 </li>
                 <li>
-                    <a href="../index.html?#skills-section" class="nav-item"> Skills </a>
+                    <a href="#skills-section" class="nav-item"> Skills </a>
                 </li>
                 <li>
-                    <a href="../index.html?#exp-section" class="nav-item">  Work Experience</a>
+                    <a href="pages/contact.html" class="nav-item"> Contact </a>
                 </li>
+                <li>
+                    <a href="pages/signin.html" class="nav-item"> Sign in</a>
+                </li>
+                <div class="closeMenu" onclick="close()"> &times;</div>
 
-                <li>
-                    <a href="# " class="nav-item "> Contact Me</a>
-                </li>
-                <li>
-                    <a href="signin.html " class="nav-item "> Sign in</a>
-                </li>
             </ul>
-            <p class="social-links ">Get In Touch</p>
+        </nav>
 
-        </div>
-    </div>
+    </header>
+
+
+
+
 
     <div class="social-section ">
         <div class="left ">
@@ -74,6 +71,11 @@
             <div class="item ">
                 <i class="icon-facebook icon-2x "></i>
                 <span>Nkundineza David</span></div>
+
+            <div class="address ">
+                <h2>Physical Address</h2>
+                <h3>Based at: Kigali-Rwanda</h3>
+            </div>
         </div>
         <div class="right ">
             <div class="contact-form ">
@@ -91,12 +93,11 @@
 
             </div>
         </div>
+
+
     </div>
 
-    <div class="address ">
-        <p>Physical Address</p>
-        <h2>Based at: Kigali-Rwanda</h2>
-    </div>
+
 
 
 

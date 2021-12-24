@@ -1,224 +1,336 @@
-/*smart phones*/
-
-@media(max-width:500px) {
-    * {
-        font-family: 'Open Sans', sans-serif;
-        /* margin: 0;
+                /*smart phones*/
+                
+                @media(max-width:800px) {
+                    * {
+                        font-family: 'Open Sans', sans-serif;
+                        /* margin: 0;
                                     padding: 0; */
-        font-size: 18px;
-        width: 100%;
-    }
-    .sidebar {
-        margin-top: 0;
-        position: fixed;
-        width: 30%;
-        background-color: black;
-        height: 100vh;
-        margin-left: -30%;
-    }
-    .sidebar .active {
-        left: 0px
-    }
-    .home-section {
-        align-items: center;
-        width: 100%;
-        line-height: 40px;
-        padding-top: 10%;
-        height: 50vh;
-    }
-    .home-section .open-slide {
-        padding-left: 0%;
-        padding-top: 0%;
-        margin-top: 0%;
-    }
-    .home-section .open-slide a svg {
-        background-color: aliceblue;
-        margin-top: 0;
-    }
-    .home-section .intro-header {
-        /* width: max-content; */
-        color: #ffffff;
-        background-color: #9796e4;
-        margin-left: 0%;
-        margin-top: 50% 0;
-        padding-right: 0%;
-    }
-    .home-section .open-slide a svg rect {
-        color: #f1f5f5;
-    }
-    .home-section .intro-parag {
-        color: #00FFFF;
-        width: fit-content;
-        padding-left: 0%;
-        padding-top: 10%;
-        background-color: blue;
-        font-size: smaller;
-    }
-    /* design for About Section */
-    .body-section {
-        height: 100%;
-        padding-left: -40%;
-        padding: 0%;
-        width: 1%;
-        background-color: #9796e4;
-    }
-    .body-section #about {
-        background-color: #ffffff;
-    }
-    .body-section #about h2 {
-        font-weight: bold;
-        float: center;
-    }
-    .body-section #about p {
-        width: 100%;
-        margin-top: 20%;
-        margin-left: -30%;
-    }
-    /* ..............skills section........*/
-    #skills-section {
-        height: 90vh;
-        margin-left: -30%;
-        padding: 10%;
-    }
-    #skills-section .skills {
-        width: 100%;
-        margin-top: 0px;
-    }
-    #skills-section .skills .skills-list {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 20px;
-        color: black;
-        justify-content: space-between;
-        margin-top: 0px;
-    }
-    /*........Experience section........*/
-    #exp-section {
-        margin-left: -30%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        padding: 0%;
-        color: #ffffff;
-        line-height: 4%;
-    }
-    button {
-        background-color: #9796e4;
-        width: 100%;
-        height: 50px;
-        margin-top: 20px;
-        color: #ffffff;
-        font-size: larger;
-    }
-    /*.......section for projects..........*/
-    #proj-section {
-        margin-left: 300px;
-        background-image: url('../image/background.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 90vh;
-        padding: 10%;
-        color: #ffffff;
-    }
-    #proj-section .projects {
-        margin-top: 10%;
-        line-height: 40px;
-    }
-    #proj-section .projects img {
-        width: 500px;
-        height: 300px;
-        margin-top: 90px;
-    }
-    #proj-section .projects a {
-        text-decoration: none;
-        color: blue;
-        margin-top: 100px;
-    }
-    /* style for sign-in page*/
-    .sign-form {
-        display: flex;
-        flex-direction: column;
-        background-color: #1C1919;
-        width: 50%;
-        margin: 5%;
-        border-radius: 4px;
-        margin-left: 40% !important;
-        color: #ffffff;
-    }
-    .sign-form form {
-        display: flex;
-        flex-direction: column;
-        padding: 10%;
-    }
-    .sign-form form h2 {
-        flex-direction: column;
-        padding: 5% 30%;
-    }
-    input[type=text],
-    input[type=password],
-    input[type=email] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        border: 1px solid #ccc;
-        border-radius: 50px;
-        box-sizing: border-box;
-    }
-    input[type=submit] {
-        width: 100%;
-        padding: 12px 20px;
-        border-radius: 50px;
-        box-sizing: border-box;
-        background-color: black;
-        color: #ffffff;
-        font-size: larger;
-        margin-top: 10px;
-    }
-    /* .....end of sign in style... */
-    /* .......style for contact page*/
-    .social-section {
-        margin: 0% 30%;
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        width: 70%;
-        height: 90vh;
-    }
-    .social-section .left {
-        margin-left: 0;
-    }
-    .social-section .left h2 {
-        margin-bottom: 25px;
-        font-size: 30px;
-    }
-    .social-section .left .item {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        height: 80px;
-    }
-    .social-section .left .item i {
-        margin-right: 10px;
-    }
-    .social-section .right {
-        width: max-content;
-        margin-left: 0%;
-        margin-left: 300px;
-    }
-    .social-section .right .contact-form {
-        display: flex;
-        flex-direction: row;
-        padding: 15% 10%;
-    }
-    .social-section .right .contact-form h2 {
-        margin-bottom: 15px;
-    }
-    .social-section .right .contact-form form {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    .address {
-        margin-left: 30%;
-    }
-}
+                        font-size: 18px;
+                        width: 100%;
+                        margin: 0;
+                    }
+                    body {
+                        overflow-x: hidden;
+                    }
+                    .navbar .mainMenu {
+                        height: 100vh;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 10;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        background: #000;
+                        transition: top 1s ease;
+                        display: none;
+                        padding: 0;
+                    }
+                    .navbar .mainMenu .closeMenu {
+                        display: block;
+                        position: absolute;
+                        top: 20px;
+                        right: 20p;
+                    }
+                    .navbar .openMenu {
+                        display: block;
+                    }
+                    /* 
+designing the contents to be displayed in body section */
+                    .home-section {
+                        /* background-image: url('../image/background.jpg'); */
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 100%;
+                        margin: 0% 0%;
+                        padding-top: 10%;
+                        height: 90vh;
+                        font-size: 24px;
+                    }
+                    .home-section .intro-header {
+                        width: 13px;
+                        color: #ffffff;
+                        padding-left: 3% !important;
+                        padding-bottom: 5%;
+                    }
+                    .home-section .intro-parag {
+                        color: #00FFFF;
+                        width: 300px !important;
+                        padding-left: 3% !important;
+                    }
+                    .home-section a {
+                        margin-left: 3% !important;
+                    }
+                    button {
+                        background-color: #121216;
+                        width: 60% !important;
+                        height: 50px;
+                        margin-top: 20px;
+                        font-size: small;
+                        padding: 0%;
+                    }
+                    /* design for About Section */
+                    .body-section {
+                        height: 70vh;
+                        margin-left: 0%;
+                        font-size: 20px;
+                        line-height: 40px;
+                        font-size: 24px;
+                    }
+                    #about .profile img {
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                        margin-right: 20%;
+                    }
+                    #about {
+                        background-color: #fdf7f7;
+                        height: 100%;
+                        padding: 10% 10%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        width: 100%;
+                    }
+                    #about p {
+                        width: 80% !important;
+                        font-size: 18px;
+                        margin-left: 2% !important;
+                    }
+                    #about h2 {
+                        font-weight: bold;
+                        margin-top: 24px;
+                        text-align: left;
+                        margin-left: 0%;
+                        font-size: 24px;
+                        width: 35%;
+                    }
+                    .address #about p {
+                        width: fit-content;
+                        margin-top: 20px;
+                        opacity: 100% !important;
+                        font-size: 18px;
+                    }
+                    /* ..............skills section........*/
+                    #skills-section {
+                        height: 100vh;
+                        background-color: #9d9da0;
+                        align-items: center;
+                    }
+                    #skills-section h1 {
+                        margin-bottom: 20px;
+                        padding: 0% 0% !important;
+                        font-size: larger!important;
+                        width: 35%;
+                    }
+                    #skills-section h2 {
+                        margin-bottom: 15px;
+                        font-size: larger!important;
+                    }
+                    #skills-section .skills {
+                        width: 100%;
+                        margin-top: 0px;
+                        padding-bottom: 10%;
+                    }
+                    #skills-section .skills .skills-list {
+                        display: flex;
+                        flex-direction: column !important;
+                        justify-content: space-between;
+                    }
+                    #skills-section .skills .skills-list .left {
+                        margin-bottom: 10%;
+                    }
+                    #skills-section .skills .skills-list .left .item {
+                        display: flex;
+                        margin-bottom: 20px;
+                        color: black;
+                        padding-top: 10px;
+                    }
+                    #skills-section .skills .skills-list .left span {
+                        font-size: 18px !important;
+                        margin-left: 22px;
+                    }
+                    #skills-section .skills .other-skills {
+                        margin-left: 0% !important;
+                    }
+                    #skills-section .skills .skills-list .right .item {
+                        margin-bottom: 20px;
+                    }
+                    #skills-section .skills .skills-list .left .item i {
+                        margin-right: 10px;
+                    }
+                    #skills-section .skills .skills-list .right span {
+                        font-size: 18px !important;
+                    }
+                    #skills-section .skills .language {
+                        padding-top: 2%;
+                        padding-left: 0% !important;
+                    }
+                    #skills-section .skills .language h2 {
+                        padding-left: 0% !important;
+                        font-size: larger!important;
+                    }
+                    #skills-section .skills .language ul {
+                        width: 100%;
+                        margin-right: 0% !important;
+                    }
+                    #skills-section .skills .language ul li {
+                        list-style: none;
+                        font-weight: 800;
+                        width: 80% !important;
+                        font-size: 18px !important;
+                    }
+                    /* style for sign-in page*/
+                    .form-1 {
+                        padding: 6% 0% !important;
+                        background-color: violet;
+                        height: 80vh !important;
+                    }
+                    .sign-form {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #1C1919;
+                        width: 50% !important;
+                        border-radius: 4px;
+                        color: #ffffff;
+                        padding-left: 2% !important;
+                        margin: 20% 0 !important;
+                        height: 80% !important;
+                    }
+                    /* .sign-form form {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 2% !important;
+                    } */
+                    .sign-form h2 {
+                        flex-direction: column;
+                        padding: 5% 30%;
+                    }
+                    input[type=text],
+                    input[type=password],
+                    input[type=email] {
+                        width: 10%;
+                        padding: 1% 5%;
+                        border-radius: 50px;
+                        box-sizing: border-box;
+                    }
+                    input[type=submit] {
+                        width: 100%;
+                        padding: 0% 0%;
+                        border-radius: 50px;
+                        box-sizing: border-box;
+                        background-color: black;
+                        color: #ffffff;
+                        font-size: small;
+                        margin-top: 10%;
+                    }
+                    /* .....end of sign in style... */
+                    /* .......style for contact page*/
+                    .social-section {
+                        margin: 0% 0%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        justify-content: space-evenly;
+                        width: 100%;
+                        height: 90vh;
+                        padding-left: 5%;
+                        padding-top: 5%;
+                        font: 24px;
+                        background-color: #9d9da0;
+                        ;
+                    }
+                    .social-section .left {
+                        padding-left: 0;
+                    }
+                    .social-section .left h2 {
+                        margin-bottom: 25px;
+                        font-size: 30px;
+                    }
+                    .social-section .left .item {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        height: 80px;
+                    }
+                    .social-section .left .item i {
+                        margin-right: 10px;
+                    }
+                    .social-section .right {
+                        width: max-content;
+                        margin-left: 5%;
+                    }
+                    .social-section .right .contact-form {
+                        display: flex;
+                        flex-direction: row;
+                        padding: 15% 10%;
+                        width: 100%;
+                    }
+                    .social-section .right .contact-form h2 {
+                        margin-bottom: 15px;
+                        top: 0;
+                    }
+                    .social-section .right .contact-form form {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                    }
+                    .social-section .right .contact-form form #input[type=email] {
+                        width: 100%;
+                        padding: 12px 20px;
+                        margin: 8px 0;
+                        border: 1px solid #ccc;
+                        border-radius: 50px;
+                        box-sizing: border-box;
+                    }
+                    .address {
+                        margin-left: 10%;
+                    }
+                    /* portfolio section*/
+                    #projects {
+                        margin-left: 0%;
+                        background-color: #f1f5f5;
+                        height: 100vh !important;
+                        width: 100%;
+                    }
+                    #projects h1 {
+                        padding: 5% 2% !important;
+                        font-size: 24px;
+                        margin-top: 10%;
+                    }
+                    .container {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        align-items: stretch;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                    }
+                    .container .card {
+                        padding-top: 5%;
+                        margin-right: 0%;
+                        width: 80% !important;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 5%;
+                    }
+                    .container .card img {
+                        width: 100%;
+                        height: 10rem !important;
+                    }
+                    .container .card .container-x {
+                        padding: 2px 16px;
+                        font-size: 24px;
+                    }
+                    .section-contact {
+                        padding-left: 10%;
+                        background-color: black;
+                        color: white;
+                    }
+                    .section-contact i {
+                        padding-right: 10px;
+                        font-size: smaller;
+                    }
+                }

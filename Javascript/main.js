@@ -1,6 +1,17 @@
-function openSlideMenu() {
+const mainMenu = document.querySelector('.mainMenu');
+const closeMenu = document.querySelector('.closeMenu');
+const openMenu = document.querySelector('.openMenu');
 
-    document.getElementById('side-bar').style.marginLeft = '0';
-    // document.getElementById('main').style.marginLeft = '250px';
+openMenu.addEventListener("click ", show);
+closeMenu.addEventListener('click ', close);
 
+function show() {
+    mainMenu.style.display = 'flex';
+    mainMenu.style.top = '0';
+
+}
+
+function close() {
+
+    mainMenu.style.display = 'none';
 }
