@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is my-Brand project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>Admin- add post</title>
+</head>
+
+<body>
+
+
+    <div class="navbar">
+        <div class="admin-header">
+            <h3>admin Site</h3>
+            <div class="user"> <i class="icon-user icon-2x"></i>
+                <span>Logout</span> </div>
+        </div>
+
+    </div>
+
+    <div class="admin-section">
+
+        <!--left side bar-->
+        <div class="left-side-bar">
+            <ul>
+                <li>
+                    <a href="dashboard.html">Manage posts</a>
+                </li>
+                <li>
+                    <a href="dashboard.html">Queries</a>
+                </li>
+                <li>
+                    <a href="#">logout</a>
+                </li>
+            </ul>
+        </div>
+        <!--admin content-->
+        <div class=" admin-content ">
+            <div class="button-group">
+                <a href="create.html" class="btn-bg">Add Post</a>
+                <a href="dashboard.html" class="btn-bg">Manage Posts</a>
+            </div>
+
+            <div class="content">
+                <h2>Update Article</h2>
+
+                <form action="create.html" method="post">
+                    <div>
+                        <label for="Title">Title</label><br>
+                        <input type="text" name="title" class="text-input">
+                    </div>
+                    <div>
+                        <label for="body">Body</label><br>
+                        <textarea name="body" id="body"></textarea>
+                    </div>
+                    <div>
+                        <label for="image">Image</label><br>
+                        <input type="file" name="file" class="text-input">
+                    </div>
+                    <div>
+                        <label for="Date">Date</label><br>
+                        <input type="date" name="date" class="date-input">
+                    </div>
+
+                    <div>
+                        <label for="Date">Author</label><br>
+                        <input type="text" name="user" class="date-input">
+                    </div>
+
+                    <div>
+                        <button type="submit" class="submit-button">Update Post</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <script src=" https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js "></script>
+    <script src="../js/admin.js "></script>
+</body>
