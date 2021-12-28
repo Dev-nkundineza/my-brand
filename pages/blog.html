@@ -7,92 +7,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>blog</title>
 </head>
 
 <body>
-    <div class="button-btn">
+    <header>
 
-    </div>
+        <nav class="navbar">
+            <!--Add a list of menu-->
+            <div class="openMenu"><i class="icon-reorder icon-2x" onclick="show()"></i></div>
 
-    <div class="container">
-        <div class="card">
-            <img src="../image/blog3.jpeg" alt="image">
-            <div class="container-x">
-                <h3><b>Title: </b></h3>
-                <h2>Author:</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                    more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <ul class="mainMenu">
+                <li>
+                    <a href="#" class="nav-item"> Home</a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-item"> About Us</a>
+                </li>
+                <li>
+                    <a href="#projects" class="nav-item"> Portfolio</a>
+
+                </li>
+                <li>
+                    <a href="#" class="nav-item"> Blogs</a>
+                </li>
+                <li>
+                    <a href="#skills-section" class="nav-item"> Skills </a>
+                </li>
+                <li>
+                    <a href="pages/contact.html" class="nav-item"> Contact </a>
+                </li>
+                <li>
+                    <a href="pages/signin.html" class="nav-item"> Sign in</a>
+                </li>
+                <div class="closeMenu" onclick="close()"> &times;</div>
+
+            </ul>
+        </nav>
+
+    </header>
+    <!--Body section for blog-->
+    <section class="blog-section">
+
+        <div class="blog-card">
+            <div class="card">
+                <div class="photo img-1"></div>
+                <div class="description">
+                    <div><i class="icon-thumbs-up"></i> <span> 10</span><span>&nbsp;&nbsp;&nbsp;</span>
+                        <span><i class="icon-thumbs-down "></i></span> <span>2</span></div>
+                    <h1>Learn to Code</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                    <a href="#"><button>Read More</button></a>
+                </div>
             </div>
-            <a href="details.html">
-                <div class="view-button"><button>Read More</button></div>
-            </a>
-        </div>
-
-        <div class="card">
-            <img src="../image/blog2.jpeg" alt="img">
-            <div class="container-x">
-                <h3><b>Title: </b></h3>
-                <h2>Author:</h2>
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
-                    'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                    in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            <!--Card 2-->
+            <div class="card">
+                <div class="photo img-1"></div>
+                <div class="description">
+                    <div><i class="icon-thumbs-up"></i> <span> 10</span><span>&nbsp;&nbsp;&nbsp;</span>
+                        <span><i class="icon-thumbs-down "></i></span> <span>2</span></div>
+                    <h1>Learn to Code</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                    <a href="#"><button>Read More</button></a>
+                </div>
             </div>
-            <a href="details.html">
-                <div class="view-button"><button>Read More</button></div>
-            </a>
+
         </div>
-
-        <div class="card">
-            <img src="../image/blog1.jpeg" alt="image">
-            <div class="container-x">
-                <h3><b>Title: </b></h3>
-                <h2>Author:</h2>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage
-                    of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator
-                    on the Internet. It uses a dictionary of over</p>
-            </div>
-            <a href="details.html">
-                <div class="view-button"><button>Read More</button></div>
-            </a>
-        </div>
-
-        <div class="card">
-            <img src="../image/blog4.jpeg" alt="image">
-            <div class="container-x">
-                <h3><b>Title: </b></h3>
-                <h2>Author:</h2>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-                    looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-                    1.10.33 of "de Finibus Bonorum</p>
-            </div>
-            <a href="details.html">
-                <button>Read More</button></a>
-        </div>
-        <div class="card">
-            <img src="../image/blog4.jpeg" alt="img">
-            <div class="container-x">
-                <h3><b>Title: </b></h3>
-                <h2>Author:</h2>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-                    looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-                    1.10.33 of "de Finibus Bonorum</p>
-            </div>
-            <a href="details.html">
-                <div class="view-button"><button>Read More</button></div>
-
-            </a>
-        </div>
-
-    </div>
-
-    <div class="pagination">
-        <i class="icon-chevron-left icon-2x"></i><span>previous</span><span></span>
-        <span>Next</span>
-        <i class="icon-chevron-right icon-2x"></i>
-    </div>
+    </section>
 </body>
 
 </html>
