@@ -102,7 +102,7 @@ designing the contents to be displayed in body section */
         }
         
         .home-section .intro-parag {
-            color: #00FFFF;
+            color: whitesmoke;
             width: 600px;
             padding-left: 50%;
         }
@@ -112,11 +112,11 @@ designing the contents to be displayed in body section */
         }
         
         button {
-            background-color: #9796e4;
-            width: 30rem;
-            height: 50px;
+            background-color: lightgrey;
+            width: 25rem;
+            height: 40px;
             margin-top: 20px;
-            font-size: larger;
+            font-size: 24px;
         }
         /* design for About Section */
         
@@ -313,7 +313,7 @@ designing the contents to be displayed in body section */
         }
         /* .......style for contact page*/
         
-        #contact-section form {
+        form {
             align-content: center;
             background-color: rgb(27, 31, 34, 0.80);
             width: 50%;
@@ -445,9 +445,8 @@ designing the contents to be displayed in body section */
         
         .card .description a button {
             background: transparent;
-            padding: 2%;
+            padding: 2% auto;
             width: 70%;
-            text-align: center;
             border-radius: 10px;
         }
         /*......details page design.....*/
@@ -459,6 +458,10 @@ designing the contents to be displayed in body section */
         
         #detail-section .blog-info {
             padding: 5%;
+        }
+        
+        #detail-section .blog-info h1 {
+            margin-bottom: 10px;
         }
         
         #detail-section .blog-info .comment-list ul {
