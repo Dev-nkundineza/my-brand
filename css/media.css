@@ -1,440 +1,432 @@
-            @media(max-width:800px) {
-                * {
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: 16px;
-                    width: 100%;
-                    margin: 0%;
-                    overflow-x: hidden;
-                }
-                body {
-                    overflow-y: hidden;
-                    margin: 0% !important;
-                }
-                .navbar ul {
-                    display: flex;
-                    justify-content: space-around;
-                }
-                .navbar ul li {
-                    list-style: none;
-                    font-size: 18px;
-                    padding-left: 0px;
-                    padding-top: 1%;
-                }
-                .navbar .mainMenu {
-                    top: 0;
-                    left: 0%;
-                    right: 0;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    background: #000;
-                    transition: top 1s ease;
-                    display: none;
-                    padding: 20% !important;
-                    width: 100vw;
-                    position: fixed;
-                    cursor: pointer;
-                }
-                .navbar .mainMenu .closeMenu {
-                    display: block;
-                    position: absolute;
-                    top: 20px;
-                    padding-left: 70% !important;
-                    color: white;
-                }
-                .navbar .openMenu {
-                    display: block;
-                }
-                /* 
+                @media(max-width:991px) {
+                    * {
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 16px;
+                        width: 100%;
+                        margin: 0%;
+                        /* overflow-x: hidden; */
+                    }
+                    .header {
+                        width: 100% !important;
+                        display: flex;
+                        flex-direction: row;
+                    }
+                    button.nav-toggler {
+                        display: block;
+                        margin-left: 70%;
+                        padding-top: 0 !important;
+                    }
+                    .header .nav {
+                        width: 100%;
+                        padding: 0;
+                        max-height: 0px;
+                        overflow: hidden;
+                        visibility: hidden;
+                        transition: all 0.5s ease;
+                    }
+                    .header .nav.open {
+                        visibility: visible;
+                    }
+                    .header .nav ul {
+                        padding: 12px 15px 0;
+                        margin-top: 12px;
+                        border-top: 1px solid rgba(255, 255, 255, 0.2);
+                    }
+                    .header .nav ul li {
+                        display: block;
+                        margin: 0;
+                    }
+                    /* 
 designing the contents to be displayed in body section */
-                .home-section {
-                    /* background-image: url('../image/background.jpg'); */
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    width: 100% !important;
-                    margin: 20% 0%;
-                    padding-top: 10%;
-                    height: 90vh;
-                    font-size: 24px;
-                    overflow-x: hidden;
-                    overflow-y: hidden;
+                    .home-section {
+                        /* background-image: url('../image/background.jpg'); */
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        width: 100% !important;
+                        margin: 0% 0%;
+                        padding-top: 30% !important;
+                        height: 90vh;
+                        font-size: 24px;
+                        overflow-x: hidden;
+                        overflow-y: hidden;
+                    }
+                    .home-section .intro-header {
+                        width: 13px;
+                        color: #ffffff;
+                        padding-left: 3% !important;
+                        padding-bottom: 5%;
+                    }
+                    .home-section .intro-parag {
+                        color: #00FFFF;
+                        width: 300px !important;
+                        padding-left: 3% !important;
+                    }
+                    .home-section a {
+                        margin-left: 3% !important;
+                    }
+                    button {
+                        background-color: #121216;
+                        width: 60% !important;
+                        height: 50px;
+                        margin-top: 20px;
+                        font-size: small;
+                        padding: 0%;
+                    }
+                    /* design for About Section */
+                    #about {
+                        margin: 0%;
+                        background-color: beige;
+                        width: 100vw;
+                        height: 100vh;
+                    }
+                    #about .container {
+                        display: flex;
+                        padding: 0% 0% 0% 0% !important;
+                        background-color: lightgrey;
+                        flex-direction: row;
+                        height: 100vh;
+                        top: 0%;
+                        line-height: 1.5rem;
+                    }
+                    #about .container .box img {
+                        width: 50%;
+                        height: 50% !important;
+                        border-radius: 50%;
+                        margin-bottom: 0rem !important;
+                        margin-top: 4% !important;
+                        margin-left: 5% auto !important;
+                    }
+                    #about .container .box {
+                        margin: 0% !important;
+                        width: 80% !important;
+                    }
+                    #about .container .box .about-info {
+                        margin: 10% 2% !important;
+                        background-color: lightgrey;
+                        color: black;
+                        box-shadow: -10px -10px 10px rgb(102, 100, 100);
+                    }
+                    #about .container .box .about-info p {
+                        font-size: 18px;
+                        width: 100%;
+                        padding-top: 2rem;
+                    }
+                    /* ..............skills section........*/
+                    #skills-section {
+                        margin: 15% 0% 0% 0% !important;
+                        font-size: 16px;
+                        height: max-content !important;
+                        width: 100vw;
+                        color: white;
+                        position: relative;
+                    }
+                    #skills-section h1 {
+                        text-align: center;
+                        margin-bottom: 3%;
+                        font-size: 18px;
+                    }
+                    #skills-section .skills {
+                        padding-left: 5%;
+                        display: grid;
+                        grid-gap: 5px;
+                        margin-left: 0% !important;
+                        width: 100%;
+                        grid-template-rows: repeat( auto-fit, 25%);
+                        height: max-content;
+                        padding-left: 25% !important;
+                    }
+                    #skills-section .skills li {
+                        line-height: 2;
+                        list-style: none;
+                    }
+                    #skills-section .skills li img {
+                        width: 100px !important;
+                        height: 100px;
+                    }
+                    #skills-section .skills div {
+                        padding: 1rem;
+                        margin-top: 2rem;
+                        width: 100% !important;
+                    }
+                    #skills-section .skills div:nth-child(odd) {
+                        background-color: rgba(211, 211, 211, 0.1);
+                        color: white;
+                        width: max-content !important;
+                    }
+                    .skills-ti {
+                        font-size: 1rem;
+                        font-weight: bold;
+                    }
+                    /* portfolio section*/
+                    .container {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        background-color: #444;
+                        width: 100vw;
+                        margin-top: 10px;
+                    }
+                    .sect-title {
+                        text-align: center;
+                        padding-top: 10%;
+                        color: white;
+                        font-size: 24px;
+                    }
+                    .card {
+                        background-color: aliceblue;
+                        width: 100% !important;
+                        height: 500px;
+                        margin: 20px;
+                        border-radius: 15px !important;
+                        box-shadow: 5px 5px 5px rgb(116, 112, 112) !important;
+                        font-size: 18px;
+                    }
+                    .card-image {
+                        background-color: aqua;
+                        height: 200px !important;
+                        margin-bottom: 10px !important;
+                        background-size: cover;
+                        border-radius: 15px !important;
+                    }
+                    .car-1 {
+                        background-image: url('../image/CINEMANIA.png');
+                    }
+                    .car-2 {
+                        background-image: url('../image/api.jpg');
+                    }
+                    .card p {
+                        margin: 10px auto !important;
+                        width: 95% !important;
+                    }
+                    .card h2 {
+                        padding-left: 5px;
+                        margin-bottom: 10px !important;
+                        font-weight: bold;
+                        font-size: 18px !important;
+                    }
+                    .card:hover {
+                        background-color: gainsboro;
+                        color: black;
+                        transform: scale(1.03);
+                        cursor: pointer;
+                        transition: all 1s ease;
+                    }
+                    /*footer*/
+                    footer {
+                        background-color: #111;
+                        color: aliceblue;
+                        padding-top: 40px;
+                        width: 100vw;
+                        height: max-content !important;
+                    }
+                    .footer-content {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        text-align: center;
+                    }
+                    .footer-content h3 {
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                        line-height: 3rem !important;
+                    }
+                    .footer-content p {
+                        font-size: 14px;
+                        margin: 10px auto;
+                    }
+                    .socials {
+                        list-style: none;
+                        display: flex;
+                        justify-content: center;
+                        margin: 1rem 0 3rem 0;
+                    }
+                    .socials li {
+                        margin: 0 2rem;
+                    }
+                    .footer-bottom {
+                        background-color: #000;
+                        text-align: center;
+                        padding: 20px 0;
+                        width: 100vw;
+                    }
+                    .footer-bottom p {
+                        text-transform: capitalize;
+                        word-spacing: 2px;
+                        font-weight: 200;
+                    }
+                    /* .......style for contact page*/
+                    form {
+                        align-content: center;
+                        background-color: rgb(27, 31, 34, 0.80);
+                        width: 90% !important;
+                        margin: 10% auto !important;
+                        color: aliceblue;
+                        border-radius: 10px;
+                        padding: 25px 10px;
+                        height: 90vh;
+                    }
+                    form .title h2 {
+                        display: flex;
+                        border-bottom: 1px solid white;
+                        letter-spacing: 6px;
+                        margin-bottom: 30px !important;
+                        width: fit-content;
+                    }
+                    form .left {
+                        display: flex;
+                        flex-direction: column !important;
+                        justify-content: space-between;
+                    }
+                    form .left .item {
+                        display: flex;
+                        flex-direction: column !important;
+                        margin-bottom: 10px;
+                        width: 90% !important;
+                        padding-top: 20PX !important;
+                    }
+                    form label {
+                        display: block;
+                        font-size: 14px;
+                        letter-spacing: 3px;
+                    }
+                    form .left .item input {
+                        border-radius: 10px;
+                        padding: 10px !important;
+                        outline: 0;
+                        border: 1px solid white;
+                        background: transparent;
+                        font-size: 16px;
+                        color: white;
+                        width: 90% !important;
+                        margin: 0px 0px 26px 10px !important;
+                    }
+                    .pass-label {
+                        margin-right: 10px;
+                    }
+                    form .full {
+                        margin-bottom: 24px;
+                    }
+                    form .full textarea {
+                        background: transparent;
+                        border-radius: 10px;
+                        border: 1px solid white;
+                        width: 80% !important;
+                        padding: 5%;
+                        color: white;
+                        font-size: 16px;
+                    }
+                    form .action {
+                        margin-bottom: 32px;
+                    }
+                    form .action input {
+                        background: white;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        letter-spacing: 2px;
+                        width: 50% !important;
+                        font-size: 16px;
+                        font-weight: 600;
+                        height: 40px;
+                        padding: 0 20px 0 20px;
+                        color: #000;
+                    }
+                    /*....blog page design*/
+                    .blog-section {
+                        margin: 30% auto !important;
+                        background-color: rgba(142, 156, 161, 0.2) !important;
+                        background-size: cover;
+                        background-attachment: scroll;
+                    }
+                    .blog-card {
+                        width: 100%;
+                        padding-left: 0%;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                    }
+                    .card {
+                        width: 90% !important;
+                        box-shadow: 10px 10px 10px rgb(230, 234, 235);
+                        background-color: rgb(255, 255, 255);
+                        border-radius: 10px;
+                        height: max-content !important;
+                        margin: 5%;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .card:hover {
+                        transform: scale(1.03);
+                        transition: all 1s ease;
+                        cursor: pointer;
+                    }
+                    .card .photo {
+                        height: 200px !important;
+                        margin-bottom: 0px;
+                        background-size: cover;
+                        border-radius: 15px 15px 0px 0px;
+                    }
+                    .img-1 {
+                        background-image: url('../image/bgcontact.png');
+                    }
+                    .card .description {
+                        padding: 2% auto !important;
+                    }
+                    .card .description a {
+                        margin: 10%;
+                        align-items: center;
+                    }
+                    .card .description a button {
+                        background: transparent;
+                        padding: 2% auto;
+                        width: 70%;
+                        border-radius: 10px;
+                    }
+                    /*......details page design.....*/
+                    #detail-section {
+                        margin: 30% 0% auto !important;
+                        background-color: rgb(226, 224, 222);
+                    }
+                    #detail-section .blog-info {
+                        padding: 5% auto !important;
+                    }
+                    #detail-section .blog-info h1 {
+                        margin-bottom: 10px;
+                    }
+                    #detail-section .blog-info img {
+                        width: 60%;
+                    }
+                    #detail-section .blog-info .comment-list ul {
+                        list-style: none;
+                    }
+                    #detail-section .blog-info .comment-list ul li {
+                        margin-bottom: 2rem;
+                    }
+                    #detail-section .blog-info p {
+                        margin-bottom: 2rem;
+                        width: 90%;
+                    }
+                    #detail-section .blog-info hr {
+                        width: 90%;
+                    }
+                    #detail-section .stats {
+                        font-weight: 800;
+                        margin-bottom: 0rem !important;
+                    }
+                    #detail-section .blog-info form {
+                        display: flex;
+                        flex-direction: column;
+                        width: 30%;
+                        height: fit-content !important;
+                        padding-left: 0% !important;
+                        padding-bottom: 0% !important;
+                        margin-left: 0% !important;
+                        margin-bottom: 10% !important;
+                    }
+                    #detail-section .blog-info form input,
+                    textarea {
+                        margin-bottom: 0.5rem !important;
+                        padding: 4% auto !important;
+                        border-radius: 10px;
+                    }
                 }
-                .home-section .intro-header {
-                    width: 13px;
-                    color: #ffffff;
-                    padding-left: 3% !important;
-                    padding-bottom: 5%;
-                }
-                .home-section .intro-parag {
-                    color: #00FFFF;
-                    width: 300px !important;
-                    padding-left: 3% !important;
-                }
-                .home-section a {
-                    margin-left: 3% !important;
-                }
-                button {
-                    background-color: #121216;
-                    width: 60% !important;
-                    height: 50px;
-                    margin-top: 20px;
-                    font-size: small;
-                    padding: 0%;
-                }
-                /* design for About Section */
-                #about {
-                    margin: 0%;
-                    background-color: beige;
-                    width: 100vw;
-                    height: 100vh;
-                }
-                #about .container {
-                    display: flex;
-                    padding: 0% 0% 0% 0% !important;
-                    background-color: lightgrey;
-                    flex-direction: row;
-                    height: 100vh;
-                    top: 0%;
-                    line-height: 1.5rem;
-                }
-                #about .container .box img {
-                    width: 50%;
-                    height: 50% !important;
-                    border-radius: 50%;
-                    margin-bottom: 0rem !important;
-                    margin-top: 4% !important;
-                    margin-left: 5% auto !important;
-                }
-                #about .container .box {
-                    margin: 0% !important;
-                    width: 80% !important;
-                }
-                #about .container .box .about-info {
-                    margin: 10% 2% !important;
-                    background-color: lightgrey;
-                    color: black;
-                    box-shadow: -10px -10px 10px rgb(102, 100, 100);
-                }
-                #about .container .box .about-info p {
-                    font-size: 18px;
-                    width: 100%;
-                    padding-top: 2rem;
-                }
-                /* ..............skills section........*/
-                #skills-section {
-                    margin: 15% 0% 0% 0% !important;
-                    font-size: 16px;
-                    height: max-content !important;
-                    width: 100vw;
-                    color: white;
-                    position: relative;
-                }
-                #skills-section h1 {
-                    text-align: center;
-                    margin-bottom: 3%;
-                    font-size: 18px;
-                }
-                #skills-section .skills {
-                    padding-left: 5%;
-                    display: grid;
-                    grid-gap: 5px;
-                    margin-left: 0% !important;
-                    width: 100%;
-                    grid-template-rows: repeat( auto-fit, 25%);
-                    height: max-content;
-                    padding-left: 25% !important;
-                }
-                #skills-section .skills li {
-                    line-height: 2;
-                    list-style: none;
-                }
-                #skills-section .skills li img {
-                    width: 100px !important;
-                    height: 100px;
-                }
-                #skills-section .skills div {
-                    padding: 1rem;
-                    margin-top: 2rem;
-                    width: 100% !important;
-                }
-                #skills-section .skills div:nth-child(odd) {
-                    background-color: rgba(211, 211, 211, 0.1);
-                    color: white;
-                    width: max-content !important;
-                }
-                .skills-ti {
-                    font-size: 1rem;
-                    font-weight: bold;
-                }
-                /* portfolio section*/
-                .container {
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    background-color: #444;
-                    width: 100vw;
-                    margin-top: 10px;
-                }
-                .sect-title {
-                    text-align: center;
-                    padding-top: 10%;
-                    color: white;
-                    font-size: 24px;
-                }
-                .card {
-                    background-color: aliceblue;
-                    width: 100% !important;
-                    height: 500px;
-                    margin: 20px;
-                    border-radius: 15px !important;
-                    box-shadow: 5px 5px 5px rgb(116, 112, 112) !important;
-                    font-size: 18px;
-                }
-                .card-image {
-                    background-color: aqua;
-                    height: 200px !important;
-                    margin-bottom: 10px !important;
-                    background-size: cover;
-                    border-radius: 15px !important;
-                }
-                .car-1 {
-                    background-image: url('../image/CINEMANIA.png');
-                }
-                .car-2 {
-                    background-image: url('../image/api.jpg');
-                }
-                .card p {
-                    margin: 10px auto !important;
-                    width: 95% !important;
-                }
-                .card h2 {
-                    padding-left: 5px;
-                    margin-bottom: 10px !important;
-                    font-weight: bold;
-                    font-size: 18px !important;
-                }
-                .card:hover {
-                    background-color: gainsboro;
-                    color: black;
-                    transform: scale(1.03);
-                    cursor: pointer;
-                    transition: all 1s ease;
-                }
-                /*footer*/
-                footer {
-                    background-color: #111;
-                    color: aliceblue;
-                    padding-top: 40px;
-                    width: 100vw;
-                    height: max-content !important;
-                }
-                .footer-content {
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column;
-                    text-align: center;
-                }
-                .footer-content h3 {
-                    font-size: 1.8rem;
-                    font-weight: 400;
-                    text-transform: capitalize;
-                    line-height: 3rem !important;
-                }
-                .footer-content p {
-                    font-size: 14px;
-                    margin: 10px auto;
-                }
-                .socials {
-                    list-style: none;
-                    display: flex;
-                    justify-content: center;
-                    margin: 1rem 0 3rem 0;
-                }
-                .socials li {
-                    margin: 0 2rem;
-                }
-                .footer-bottom {
-                    background-color: #000;
-                    text-align: center;
-                    padding: 20px 0;
-                    width: 100vw;
-                }
-                .footer-bottom p {
-                    text-transform: capitalize;
-                    word-spacing: 2px;
-                    font-weight: 200;
-                }
-                /* .......style for contact page*/
-                form {
-                    align-content: center;
-                    background-color: rgb(27, 31, 34, 0.80);
-                    width: 90% !important;
-                    margin: 20px auto !important;
-                    color: aliceblue;
-                    border-radius: 10px;
-                    padding: 25px 10px;
-                    height: 70vh;
-                }
-                form .title h2 {
-                    display: flex;
-                    border-bottom: 1px solid white;
-                    letter-spacing: 6px;
-                    margin-bottom: 30px !important;
-                    width: fit-content;
-                }
-                form .left {
-                    display: flex;
-                    flex-direction: column !important;
-                    justify-content: space-between;
-                }
-                form .left .item {
-                    display: flex;
-                    flex-direction: column !important;
-                    margin-bottom: 10px;
-                    width: 90% !important;
-                    padding-top: 20PX !important;
-                }
-                form label {
-                    display: block;
-                    font-size: 14px;
-                    letter-spacing: 3px;
-                }
-                form .left .item input {
-                    border-radius: 10px;
-                    padding: 10px !important;
-                    outline: 0;
-                    border: 1px solid white;
-                    background: transparent;
-                    font-size: 16px;
-                    color: white;
-                    width: 90% !important;
-                    margin: 0px 0px 26px 10px !important;
-                }
-                .pass-label {
-                    margin-right: 10px;
-                }
-                form .full {
-                    margin-bottom: 24px;
-                }
-                form .full textarea {
-                    background: transparent;
-                    border-radius: 10px;
-                    border: 1px solid white;
-                    width: 80% !important;
-                    padding: 5%;
-                    color: white;
-                    font-size: 16px;
-                }
-                form .action {
-                    margin-bottom: 32px;
-                }
-                form .action input {
-                    background: white;
-                    cursor: pointer;
-                    border-radius: 10px;
-                    letter-spacing: 2px;
-                    width: 50% !important;
-                    font-size: 16px;
-                    font-weight: 600;
-                    height: 40px;
-                    padding: 0 20px 0 20px;
-                    color: #000;
-                }
-                /*....blog page design*/
-                .blog-section {
-                    margin: 0% auto;
-                    background-color: rgb(142, 156, 161);
-                    background-size: cover;
-                    background-attachment: scroll;
-                }
-                .blog-card {
-                    width: 100%;
-                    padding-left: 0%;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                }
-                .card {
-                    width: 90% !important;
-                    box-shadow: 10px 10px 10px rgb(230, 234, 235);
-                    background-color: rgb(255, 255, 255);
-                    border-radius: 10px;
-                    height: max-content !important;
-                    margin: 5%;
-                    display: flex;
-                    flex-direction: column;
-                }
-                .card:hover {
-                    transform: scale(1.03);
-                    transition: all 1s ease;
-                    cursor: pointer;
-                }
-                .card .photo {
-                    height: 200px !important;
-                    margin-bottom: 0px;
-                    background-size: cover;
-                    border-radius: 15px 15px 0px 0px;
-                }
-                .img-1 {
-                    background-image: url('../image/bgcontact.png');
-                }
-                .card .description {
-                    padding: 2% auto !important;
-                }
-                .card .description a {
-                    margin: 10%;
-                    align-items: center;
-                }
-                .card .description a button {
-                    background: transparent;
-                    padding: 2% auto;
-                    width: 70%;
-                    border-radius: 10px;
-                }
-                /*......details page design.....*/
-                #detail-section {
-                    margin: 0% 0% auto !important;
-                    background-color: rgb(226, 224, 222);
-                }
-                #detail-section .blog-info {
-                    padding: 10% auto !important;
-                }
-                #detail-section .blog-info h1 {
-                    margin-bottom: 10px;
-                }
-                #detail-section .blog-info img {
-                    width: 60%;
-                }
-                #detail-section .blog-info .comment-list ul {
-                    list-style: none;
-                }
-                #detail-section .blog-info .comment-list ul li {
-                    margin-bottom: 2rem;
-                }
-                #detail-section .blog-info p {
-                    margin-bottom: 2rem;
-                    width: 90%;
-                }
-                #detail-section .blog-info hr {
-                    width: 90%;
-                }
-                #detail-section .stats {
-                    font-weight: 800;
-                    margin-bottom: 1rem;
-                }
-                #detail-section .blog-info form {
-                    display: flex;
-                    flex-direction: column;
-                    width: 30%;
-                    padding-left: 0% !important;
-                    margin-left: 0% !important;
-                    padding-bottom: 0 !important;
-                    background-color: transparent;
-                }
-                #detail-section .blog-info form input,
-                textarea {
-                    margin-bottom: 0.5rem !important;
-                    padding: 4% auto !important;
-                    border-radius: 10px;
-                }
-            }

@@ -4,6 +4,7 @@
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -14,53 +15,135 @@ body {
     background-attachment: fixed;
 }
 
-header {
-    height: 70px;
-    background-color: #1C1919;
-    padding-top: 10px;
-    width: 100vw;
+body::-webkit-scrollbar {
+    width: 0 !important;
 }
 
-.navbar {
-    display: inline;
-}
-
-.navbar ul {
-    display: flex;
-    justify-content: space-around;
-}
-
-.navbar ul li {
+ul {
     list-style: none;
-    font-size: 18px;
-    padding-left: 0px;
-    padding-top: 1%;
 }
 
-.navbar ul li a {
+a {
     text-decoration: none;
-    color: white;
-    text-transform: uppercase;
 }
 
-.navbar ul li a:hover {
-    background-color: #1C1919;
-    color: aqua;
+.header-content {
+    max-width: 1170px;
+    margin: auto;
 }
 
-.openMenu {
-    color: white;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+
+/*header*/
+
+.header {
+    background-color: rgb(12, 12, 12);
+    padding: 12px 0;
+    line-height: 1.5;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    top: 0;
+}
+
+.header .nav {
+    padding: 0 15px;
+}
+
+.header .nav ul {
+    width: max-content;
+    margin-left: 10%;
+}
+
+.header .nav ul li {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.header .nav ul li a {
+    display: block;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    padding: 10px 0;
+    transition: all 0.5s ease;
     font-size: 24px;
-    display: none;
-    cursor: pointer;
-    margin-left: 80%;
 }
 
-.closeMenu {
-    color: white;
-    font-size: 2rem;
-    display: none;
+.header .nav ul li a.active,
+.header .nav ul li a:hover {
+    color: #f3a93d;
+    border-bottom: 1px solid #f3a93d;
+}
+
+.nav-toggler {
+    height: 34px;
+    width: 44px;
+    background-color: #ffffff;
+    border-radius: 4px;
     cursor: pointer;
+    border: none;
+    display: none;
+    margin-right: 15px;
+}
+
+.nav-toggler:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.nav-toggler span {
+    height: 2px;
+    width: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: auto;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-toggler.active span {
+    background-color: transparent;
+}
+
+.nav-toggler span::before,
+.nav-toggler span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.nav-toggler span::before {
+    transform: translateY(-6px);
+}
+
+.nav-toggler.active span::before {
+    transform: rotate(45deg);
+}
+
+.nav-toggler span::after {
+    transform: translateY(6px);
+}
+
+.nav-toggler.active span::after {
+    transform: rotate(135deg);
 }
 
 
@@ -80,22 +163,6 @@ designing the contents to be displayed in body section */
     font-size: 24px;
 }
 
-.home-section .open-slide {
-    padding-left: 400px;
-    padding-top: 0%;
-    margin-top: 0%;
-    display: none;
-}
-
-.home-section .open-slide a svg {
-    background-color: aliceblue;
-    margin-top: 0;
-}
-
-.home-section .open-slide a svg rect {
-    color: #f1f5f5;
-}
-
 .home-section .intro-header {
     width: max-content;
     color: #ffffff;
@@ -104,8 +171,8 @@ designing the contents to be displayed in body section */
 
 .home-section .intro-parag {
     color: whitesmoke;
-    width: 600px;
     padding-left: 50%;
+    margin-right: 10%;
 }
 
 .home-section a {
@@ -178,7 +245,7 @@ button {
 }
 
 #skills-section .skills {
-    padding-left: 5%;
+    padding-left: 10%;
     display: grid;
     grid-gap: 17px;
     margin-left: 10%;
@@ -327,7 +394,7 @@ form {
     align-content: center;
     background-color: rgb(27, 31, 34, 0.80);
     width: 50%;
-    margin: 50px auto;
+    margin: 10% auto;
     max-width: 90%;
     color: aliceblue;
     border-radius: 10px;
@@ -490,26 +557,4 @@ form .action input {
 
 #detail-section .blog-info .comment-list ul li {
     margin-bottom: 2rem;
-}
-
-#detail-section .blog-info .description p {
-    margin-bottom: 2rem;
-}
-
-#detail-section .stats {
-    font-weight: 800;
-    margin-bottom: 1rem;
-}
-
-#detail-section .blog-info form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-#detail-section .blog-info form input,
-textarea {
-    margin-bottom: 1rem;
-    padding: 2%;
-    border-radius: 10px;
 }
