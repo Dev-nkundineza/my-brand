@@ -1,52 +1,54 @@
-                /*smart phones*/
-                
-                @media(max-width:800px) {
+                @media(max-width:991px) {
                     * {
                         font-family: 'Open Sans', sans-serif;
-                        /* margin: 0;
-                                    padding: 0; */
-                        font-size: 18px;
+                        font-size: 16px;
                         width: 100%;
-                        margin: 0;
+                        margin: 0%;
+                        /* overflow-x: hidden; */
                     }
-                    body {
-                        overflow-x: hidden;
+                    .header {
+                        width: 100% !important;
+                        display: flex;
+                        flex-direction: row;
                     }
-                    .navbar .mainMenu {
-                        height: 100vh;
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        z-index: 10;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        background: #000;
-                        transition: top 1s ease;
-                        display: none;
+                    button.nav-toggler {
+                        display: block;
+                        margin-left: 70%;
+                        padding-top: 0 !important;
+                    }
+                    .header .nav {
+                        width: 100%;
                         padding: 0;
+                        max-height: 0px;
+                        overflow: hidden;
+                        visibility: hidden;
+                        transition: all 0.5s ease;
                     }
-                    .navbar .mainMenu .closeMenu {
-                        display: block;
-                        position: absolute;
-                        top: 20px;
-                        right: 20p;
+                    .header .nav.open {
+                        visibility: visible;
                     }
-                    .navbar .openMenu {
+                    .header .nav ul {
+                        padding: 12px 15px 0;
+                        margin-top: 12px;
+                        border-top: 1px solid rgba(255, 255, 255, 0.2);
+                    }
+                    .header .nav ul li {
                         display: block;
+                        margin: 0;
                     }
                     /* 
 designing the contents to be displayed in body section */
                     .home-section {
                         /* background-image: url('../image/background.jpg'); */
                         background-repeat: no-repeat;
-                        background-size: cover;
-                        width: 100%;
+                        background-size: contain;
+                        width: 100% !important;
                         margin: 0% 0%;
-                        padding-top: 10%;
+                        padding-top: 30% !important;
                         height: 90vh;
                         font-size: 24px;
+                        overflow-x: hidden;
+                        overflow-y: hidden;
                     }
                     .home-section .intro-header {
                         width: 13px;
@@ -71,266 +73,360 @@ designing the contents to be displayed in body section */
                         padding: 0%;
                     }
                     /* design for About Section */
-                    .body-section {
-                        height: 70vh;
-                        margin-left: 0%;
-                        font-size: 20px;
-                        line-height: 40px;
-                        font-size: 24px;
-                    }
-                    #about .profile img {
-                        width: 200px;
-                        height: 200px;
-                        border-radius: 50%;
-                        margin-right: 20%;
-                    }
                     #about {
-                        background-color: #fdf7f7;
-                        height: 100%;
-                        padding: 10% 10%;
+                        margin: 0%;
+                        background-color: beige;
+                        width: 100vw;
+                        height: 100vh;
+                    }
+                    #about .container {
                         display: flex;
-                        justify-content: space-between;
-                        align-items: flex-start;
-                        flex-direction: column;
-                        width: 100%;
+                        padding: 0% 0% 0% 0% !important;
+                        background-color: lightgrey;
+                        flex-direction: row;
+                        height: 100vh;
+                        top: 0%;
+                        line-height: 1.5rem;
                     }
-                    #about p {
+                    #about .container .box img {
+                        width: 50%;
+                        height: 50% !important;
+                        border-radius: 50%;
+                        margin-bottom: 0rem !important;
+                        margin-top: 4% !important;
+                        margin-left: 5% auto !important;
+                    }
+                    #about .container .box {
+                        margin: 0% !important;
                         width: 80% !important;
-                        font-size: 18px;
-                        margin-left: 2% !important;
                     }
-                    #about h2 {
-                        font-weight: bold;
-                        margin-top: 24px;
-                        text-align: left;
-                        margin-left: 0%;
-                        font-size: 24px;
-                        width: 35%;
+                    #about .container .box .about-info {
+                        margin: 10% 2% !important;
+                        background-color: lightgrey;
+                        color: black;
+                        box-shadow: -10px -10px 10px rgb(102, 100, 100);
                     }
-                    .address #about p {
-                        width: fit-content;
-                        margin-top: 20px;
-                        opacity: 100% !important;
+                    #about .container .box .about-info p {
                         font-size: 18px;
+                        width: 100%;
+                        padding-top: 2rem;
                     }
                     /* ..............skills section........*/
                     #skills-section {
-                        height: 100vh;
-                        background-color: #9d9da0;
-                        align-items: center;
+                        margin: 15% 0% 0% 0% !important;
+                        font-size: 16px;
+                        height: max-content !important;
+                        width: 100vw;
+                        color: white;
+                        position: relative;
                     }
                     #skills-section h1 {
-                        margin-bottom: 20px;
-                        padding: 0% 0% !important;
-                        font-size: larger!important;
-                        width: 35%;
-                    }
-                    #skills-section h2 {
-                        margin-bottom: 15px;
-                        font-size: larger!important;
+                        text-align: center;
+                        margin-bottom: 3%;
+                        font-size: 18px;
                     }
                     #skills-section .skills {
+                        padding-left: 5%;
+                        display: grid;
+                        grid-gap: 5px;
+                        margin-left: 0% !important;
                         width: 100%;
-                        margin-top: 0px;
-                        padding-bottom: 10%;
+                        grid-template-rows: repeat( auto-fit, 25%);
+                        height: max-content;
+                        padding-left: 25% !important;
                     }
-                    #skills-section .skills .skills-list {
+                    #skills-section .skills li {
+                        line-height: 2;
+                        list-style: none;
+                    }
+                    #skills-section .skills li img {
+                        width: 100px !important;
+                        height: 100px;
+                    }
+                    #skills-section .skills div {
+                        padding: 1rem;
+                        margin-top: 2rem;
+                        width: 100% !important;
+                    }
+                    #skills-section .skills div:nth-child(odd) {
+                        background-color: rgba(211, 211, 211, 0.1);
+                        color: white;
+                        width: max-content !important;
+                    }
+                    .skills-ti {
+                        font-size: 1rem;
+                        font-weight: bold;
+                    }
+                    /* portfolio section*/
+                    .container {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        background-color: #444;
+                        width: 100vw;
+                        margin-top: 10px;
+                    }
+                    .sect-title {
+                        text-align: center;
+                        padding-top: 10%;
+                        color: white;
+                        font-size: 24px;
+                    }
+                    .card {
+                        background-color: aliceblue;
+                        width: 100% !important;
+                        height: 500px;
+                        margin: 20px;
+                        border-radius: 15px !important;
+                        box-shadow: 5px 5px 5px rgb(116, 112, 112) !important;
+                        font-size: 18px;
+                    }
+                    .card-image {
+                        background-color: aqua;
+                        height: 200px !important;
+                        margin-bottom: 10px !important;
+                        background-size: cover;
+                        border-radius: 15px !important;
+                    }
+                    .car-1 {
+                        background-image: url('../image/CINEMANIA.png');
+                    }
+                    .car-2 {
+                        background-image: url('../image/api.jpg');
+                    }
+                    .card p {
+                        margin: 10px auto !important;
+                        width: 95% !important;
+                    }
+                    .card h2 {
+                        padding-left: 5px;
+                        margin-bottom: 10px !important;
+                        font-weight: bold;
+                        font-size: 18px !important;
+                    }
+                    .card:hover {
+                        background-color: gainsboro;
+                        color: black;
+                        transform: scale(1.03);
+                        cursor: pointer;
+                        transition: all 1s ease;
+                    }
+                    /*footer*/
+                    footer {
+                        background-color: #111;
+                        color: aliceblue;
+                        padding-top: 40px;
+                        width: 100vw;
+                        height: max-content !important;
+                    }
+                    .footer-content {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        text-align: center;
+                    }
+                    .footer-content h3 {
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                        line-height: 3rem !important;
+                    }
+                    .footer-content p {
+                        font-size: 14px;
+                        margin: 10px auto;
+                    }
+                    .socials {
+                        list-style: none;
+                        display: flex;
+                        justify-content: center;
+                        margin: 1rem 0 3rem 0;
+                    }
+                    .socials li {
+                        margin: 0 2rem;
+                    }
+                    .footer-bottom {
+                        background-color: #000;
+                        text-align: center;
+                        padding: 20px 0;
+                        width: 100vw;
+                    }
+                    .footer-bottom p {
+                        text-transform: capitalize;
+                        word-spacing: 2px;
+                        font-weight: 200;
+                    }
+                    /* .......style for contact page*/
+                    form {
+                        align-content: center;
+                        background-color: rgb(27, 31, 34, 0.80);
+                        width: 90% !important;
+                        margin: 10% auto !important;
+                        color: aliceblue;
+                        border-radius: 10px;
+                        padding: 25px 10px;
+                        height: 90vh;
+                    }
+                    form .title h2 {
+                        display: flex;
+                        border-bottom: 1px solid white;
+                        letter-spacing: 6px;
+                        margin-bottom: 30px !important;
+                        width: fit-content;
+                    }
+                    form .left {
                         display: flex;
                         flex-direction: column !important;
                         justify-content: space-between;
                     }
-                    #skills-section .skills .skills-list .left {
-                        margin-bottom: 10%;
-                    }
-                    #skills-section .skills .skills-list .left .item {
+                    form .left .item {
                         display: flex;
-                        margin-bottom: 20px;
-                        color: black;
-                        padding-top: 10px;
+                        flex-direction: column !important;
+                        margin-bottom: 10px;
+                        width: 90% !important;
+                        padding-top: 20PX !important;
                     }
-                    #skills-section .skills .skills-list .left span {
-                        font-size: 18px !important;
-                        margin-left: 22px;
+                    form label {
+                        display: block;
+                        font-size: 14px;
+                        letter-spacing: 3px;
                     }
-                    #skills-section .skills .other-skills {
-                        margin-left: 0% !important;
+                    form .left .item input {
+                        border-radius: 10px;
+                        padding: 10px !important;
+                        outline: 0;
+                        border: 1px solid white;
+                        background: transparent;
+                        font-size: 16px;
+                        color: white;
+                        width: 90% !important;
+                        margin: 0px 0px 26px 10px !important;
                     }
-                    #skills-section .skills .skills-list .right .item {
-                        margin-bottom: 20px;
-                    }
-                    #skills-section .skills .skills-list .left .item i {
+                    .pass-label {
                         margin-right: 10px;
                     }
-                    #skills-section .skills .skills-list .right span {
-                        font-size: 18px !important;
+                    form .full {
+                        margin-bottom: 24px;
                     }
-                    #skills-section .skills .language {
-                        padding-top: 2%;
-                        padding-left: 0% !important;
-                    }
-                    #skills-section .skills .language h2 {
-                        padding-left: 0% !important;
-                        font-size: larger!important;
-                    }
-                    #skills-section .skills .language ul {
-                        width: 100%;
-                        margin-right: 0% !important;
-                    }
-                    #skills-section .skills .language ul li {
-                        list-style: none;
-                        font-weight: 800;
+                    form .full textarea {
+                        background: transparent;
+                        border-radius: 10px;
+                        border: 1px solid white;
                         width: 80% !important;
-                        font-size: 18px !important;
+                        padding: 5%;
+                        color: white;
+                        font-size: 16px;
                     }
-                    /* style for sign-in page*/
-                    .form-1 {
-                        padding: 6% 0% !important;
-                        background-color: violet;
-                        height: 80vh !important;
+                    form .action {
+                        margin-bottom: 32px;
                     }
-                    .sign-form {
-                        display: flex;
-                        flex-direction: column;
-                        background-color: #1C1919;
+                    form .action input {
+                        background: white;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        letter-spacing: 2px;
                         width: 50% !important;
-                        border-radius: 4px;
-                        color: #ffffff;
-                        padding-left: 2% !important;
-                        margin: 20% 0 !important;
-                        height: 80% !important;
+                        font-size: 16px;
+                        font-weight: 600;
+                        height: 40px;
+                        padding: 0 20px 0 20px;
+                        color: #000;
                     }
-                    /* .sign-form form {
-                        display: flex;
-                        flex-direction: column;
-                        padding: 2% !important;
-                    } */
-                    .sign-form h2 {
-                        flex-direction: column;
-                        padding: 5% 30%;
+                    /*....blog page design*/
+                    .blog-section {
+                        margin: 30% auto !important;
+                        background-color: rgba(142, 156, 161, 0.2) !important;
+                        background-size: cover;
+                        background-attachment: scroll;
                     }
-                    input[type=text],
-                    input[type=password],
-                    input[type=email] {
-                        width: 10%;
-                        padding: 1% 5%;
-                        border-radius: 50px;
-                        box-sizing: border-box;
-                    }
-                    input[type=submit] {
+                    .blog-card {
                         width: 100%;
-                        padding: 0% 0%;
-                        border-radius: 50px;
-                        box-sizing: border-box;
-                        background-color: black;
-                        color: #ffffff;
-                        font-size: small;
-                        margin-top: 10%;
-                    }
-                    /* .....end of sign in style... */
-                    /* .......style for contact page*/
-                    .social-section {
-                        margin: 0% 0%;
-                        display: flex;
-                        flex-direction: row;
-                        align-items: flex-start;
-                        justify-content: space-evenly;
-                        width: 100%;
-                        height: 90vh;
-                        padding-left: 5%;
-                        padding-top: 5%;
-                        font: 24px;
-                        background-color: #9d9da0;
-                        ;
-                    }
-                    .social-section .left {
-                        padding-left: 0;
-                    }
-                    .social-section .left h2 {
-                        margin-bottom: 25px;
-                        font-size: 30px;
-                    }
-                    .social-section .left .item {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        height: 80px;
-                    }
-                    .social-section .left .item i {
-                        margin-right: 10px;
-                    }
-                    .social-section .right {
-                        width: max-content;
-                        margin-left: 5%;
-                    }
-                    .social-section .right .contact-form {
-                        display: flex;
-                        flex-direction: row;
-                        padding: 15% 10%;
-                        width: 100%;
-                    }
-                    .social-section .right .contact-form h2 {
-                        margin-bottom: 15px;
-                        top: 0;
-                    }
-                    .social-section .right .contact-form form {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                    }
-                    .social-section .right .contact-form form #input[type=email] {
-                        width: 100%;
-                        padding: 12px 20px;
-                        margin: 8px 0;
-                        border: 1px solid #ccc;
-                        border-radius: 50px;
-                        box-sizing: border-box;
-                    }
-                    .address {
-                        margin-left: 10%;
-                    }
-                    /* portfolio section*/
-                    #projects {
-                        margin-left: 0%;
-                        background-color: #f1f5f5;
-                        height: 100vh !important;
-                        width: 100%;
-                    }
-                    #projects h1 {
-                        padding: 5% 2% !important;
-                        font-size: 24px;
-                        margin-top: 10%;
-                    }
-                    .container {
+                        padding-left: 0%;
                         display: flex;
                         flex-direction: column;
                         flex-wrap: wrap;
-                        align-items: stretch;
-                        margin-left: 5%;
-                        margin-right: 5%;
                     }
-                    .container .card {
-                        padding-top: 5%;
-                        margin-right: 0%;
-                        width: 80% !important;
+                    .card {
+                        width: 90% !important;
+                        box-shadow: 10px 10px 10px rgb(230, 234, 235);
+                        background-color: rgb(255, 255, 255);
+                        border-radius: 10px;
+                        height: max-content !important;
+                        margin: 5%;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .card:hover {
+                        transform: scale(1.03);
+                        transition: all 1s ease;
+                        cursor: pointer;
+                    }
+                    .card .photo {
+                        height: 200px !important;
+                        margin-bottom: 0px;
+                        background-size: cover;
+                        border-radius: 15px 15px 0px 0px;
+                    }
+                    .img-1 {
+                        background-image: url('../image/bgcontact.png');
+                    }
+                    .card .description {
+                        padding: 2% auto !important;
+                    }
+                    .card .description a {
+                        margin: 10%;
                         align-items: center;
-                        justify-content: center;
-                        margin-bottom: 5%;
                     }
-                    .container .card img {
-                        width: 100%;
-                        height: 10rem !important;
+                    .card .description a button {
+                        background: transparent;
+                        padding: 2% auto;
+                        width: 70%;
+                        border-radius: 10px;
                     }
-                    .container .card .container-x {
-                        padding: 2px 16px;
-                        font-size: 24px;
+                    /*......details page design.....*/
+                    #detail-section {
+                        margin: 30% 0% auto !important;
+                        background-color: rgb(226, 224, 222);
                     }
-                    .section-contact {
-                        padding-left: 10%;
-                        background-color: black;
-                        color: white;
+                    #detail-section .blog-info {
+                        padding: 5% auto !important;
                     }
-                    .section-contact i {
-                        padding-right: 10px;
-                        font-size: smaller;
+                    #detail-section .blog-info h1 {
+                        margin-bottom: 10px;
+                    }
+                    #detail-section .blog-info img {
+                        width: 60%;
+                    }
+                    #detail-section .blog-info .comment-list ul {
+                        list-style: none;
+                    }
+                    #detail-section .blog-info .comment-list ul li {
+                        margin-bottom: 2rem;
+                    }
+                    #detail-section .blog-info p {
+                        margin-bottom: 2rem;
+                        width: 90%;
+                    }
+                    #detail-section .blog-info hr {
+                        width: 90%;
+                    }
+                    #detail-section .stats {
+                        font-weight: 800;
+                        margin-bottom: 0rem !important;
+                    }
+                    #detail-section .blog-info form {
+                        display: flex;
+                        flex-direction: column;
+                        width: 30%;
+                        height: fit-content !important;
+                        padding-left: 0% !important;
+                        padding-bottom: 0% !important;
+                        margin-left: 0% !important;
+                        margin-bottom: 10% !important;
+                    }
+                    #detail-section .blog-info form input,
+                    textarea {
+                        margin-bottom: 0.5rem !important;
+                        padding: 4% auto !important;
+                        border-radius: 10px;
                     }
                 }
