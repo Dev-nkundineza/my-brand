@@ -190,6 +190,12 @@
                        background-color: rgba(128, 128, 128, 0.2);
                    }
                    
+                   .paragraph-1 {
+                       width: 80%;
+                       /* background-color: black; */
+                       padding: 2%;
+                   }
+                   
                    @media(max-width: 800px) {
                        .navbar {
                            height: 0px;
@@ -286,6 +292,7 @@
                        }
                        .delete {
                            color: red;
+                           cursor: pointer;
                        }
                        .edit {
                            color: green;
