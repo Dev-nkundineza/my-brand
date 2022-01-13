@@ -52,6 +52,7 @@ function displayItems() {
 
 
         ul.prepend(li);
+        console.log(ul);
     }
 
 }
