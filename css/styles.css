@@ -481,7 +481,8 @@ designing the contents to be displayed in body section */
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
         height: 400px;
-        margin: 5%;
+        margin-top: 10%;
+        margin-left: 5%;
         display: flex;
         flex-direction: column;
     }
