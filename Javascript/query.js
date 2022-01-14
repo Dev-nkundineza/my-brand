@@ -37,17 +37,17 @@ function displayItems() {
         edit.setAttribute('class', 'publish');
         edit.textContent = "reply";
         const iedit = document.createElement("i");
-        iedit.setAttribute('class', 'icon-edit-sign')
+        iedit.setAttribute('class', 'icon-edit-sign');
 
         edit.appendChild(iedit);
         a.appendChild(idelete);
-        div.appendChild(edit);
-        div.appendChild(a);
-        li.appendChild(h3);
-        li.appendChild(h4);
-        li.appendChild(h5);
-        li.appendChild(p);
-        li.appendChild(div);
+        div.append(edit, a);
+        // div.appendChild(a);
+        li.append(h3, h4, h5, p, div);
+        // li.appendChild(h4);
+        // li.appendChild(h5);
+        // li.appendChild(p);
+        // li.appendChild(div);
 
 
 

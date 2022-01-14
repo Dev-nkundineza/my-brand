@@ -7,6 +7,67 @@ const message = form.elements[2];
 
 const btn = form.elements[3];
 
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    validateInputs();
+
+    myFunction();
+
+
+})
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+
+}
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+const validateInputs = () => {
+    const userNameValue = userName.value.trim();
+    const emailValue = email.value.trim();
+    const messageValue = message.value.trim();
+
+    if (userNameValue === "") {
+        setError(userName, 'invalid credential');
+    } else {
+        setSuccess(userName);
+    }
+    //check the email validation
+    if (emailValue === "") {
+        setError(email, 'invalid credentials');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'email does not exist!');
+    } else {
+        setSuccess(email);
+    }
+
+    if (messageValue === "") {
+        setError(message, 'exist empty message');
+    } else if (messageValue.length > 200) {
+        setError(message, 'too long message');
+    } else {
+        setSuccess(message);
+    }
+};
+
 function myFunction() {
 
     let questions;
@@ -23,57 +84,22 @@ function myFunction() {
         email: email.value,
         message: message.value
     }
-    questions.push(obj);
-    localStorage.setItem("questions", JSON.stringify(questions));
 
-    console.log(userName.value);
-    console.log(email.value);
-    console.log(message.value);
-    userName.value = "";
-    email.value = "";
-    message.value = "";
+    if (userName.value === "" || email.value === "" || message.value === "") {
+        alert("failed to submit empty form");
+    } else {
+        questions.push(obj);
+        localStorage.setItem("questions", JSON.stringify(questions));
 
-
-
-}
-
-
-function showMessage(input, message, type) {
-    const msg = input.parentNode.querySelector("small");
-
-    msg.innerText = message;
-    input.className = type ? "success" : "error";
-    return type;
-
-}
-
-function showError(input, message) {
-    return showMessage(input, message, false);
-}
-
-function showSuccess(input) {
-    return showMessage(input, "", true);
-}
-
-function hasValue(input, message) {
-    if (input.value.trim() === "") {
-        return showError(input, message);
+        console.log(userName.value);
+        console.log(email.value);
+        console.log(message.value);
+        userName.value = "";
+        email.value = "";
+        message.value = "";
     }
-    return showSuccess(input);
-}
 
-function validateEmail(input, requiredMsg, invalidMsg) {
-    // check if the value is not empty
-    if (!hasValue(input, requiredMsg)) {
-        return false;
-    }
-    // validate email format
-    const emailRegex =
-        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    const email = input.value.trim();
-    if (!emailRegex.test(email)) {
-        return showError(input, invalidMsg);
-    }
-    return true;
+
+
 }
