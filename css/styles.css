@@ -404,8 +404,13 @@ designing the contents to be displayed in body section */
         display: flex;
         flex-direction: row;
         margin-bottom: 10px;
-        width: 48%;
+        width: 98%;
         border-radius: 20%;
+    }
+    
+    form .left .item .error {
+        color: rgb(238, 96, 96);
+        margin-left: 20px;
     }
     
     form label {
@@ -432,6 +437,10 @@ designing the contents to be displayed in body section */
     
     form .full {
         margin-bottom: 24px;
+    }
+    
+    form .full .error {
+        color: rgb(238, 96, 96);
     }
     
     form .full textarea {

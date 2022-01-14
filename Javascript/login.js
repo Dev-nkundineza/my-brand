@@ -3,12 +3,13 @@ const loginForm = document.querySelector('form ');
 
 const user = loginForm.elements[0];
 const password = loginForm.elements[1];
+const element = document.querySelector(".error");
 
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     loginValidation();
-    autoRedirect();
-    // login();
+
+    login();
 })
 
 // function loginValidation() console.log(loginForm);
@@ -53,22 +54,18 @@ const loginValidation = () => {
 
 function login() {
     const userName = "admin";
-    const passKey = "12345678";
+    const passKey = 123;
 
-    if (user.value != userName && password.value != passKey) {
-        setError(password, ' password mismatch');
-        setError(userName, 'invalid username');
+    if (user.value != userName || password.value != passKey) {
+        // setError(password, ' password mismatch');
+        alert("invalid credentials");
+
+        user.value = "";
+        password.value = "";
 
         return false;
 
     } else {
-        return true;
+        window.location.replace('http://127.0.0.1:5502/pages/dashboard.html');
     }
-}
-
-function autoRedirect() {
-    if (!login && location.pathname != '/signin')
-        redirect('/signin')
-
-    if (login && location.pathname === '/signin/') redirect('/dashboard')
 }
