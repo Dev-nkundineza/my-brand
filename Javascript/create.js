@@ -1,3 +1,4 @@
+'use strict';
 // validatecreate article form
 
 const form = document.querySelector("form");
@@ -12,23 +13,7 @@ const filePath = form.elements['file'];
 const date = form.elements['date'];
 const author = form.elements['user'];
 
-// const btn = document.querySelector(".submit-button");
-// btn.addEventListener("click", addPost);
 
-// function addPost() {
-
-//     for (let i = 0; i <= input.length; i++) {
-
-//         if (input[i].value !== "") {
-
-//             addPostToLs();
-//         } else {
-//             alert("oops! invalid form")
-//         }
-//     }
-// }
-
-// add form data to the local storage
 
 function addPostToLs() {
     let posts;
@@ -47,11 +32,7 @@ function addPostToLs() {
 
     posts.push(obj);
     localStorage.setItem("posts", JSON.stringify(posts));
-    console.log(title.value);
-    console.log(body.value);
-    console.log(filePath.value);
-    console.log(date.value);
-    console.log(author.value);
+    console.log("successfully created");
     title.value = "";
     body.value = "";
     filePath.value = "";
