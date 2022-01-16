@@ -66,6 +66,8 @@ function login() {
         return false;
 
     } else {
+
         window.location.replace('http://127.0.0.1:5502/pages/dashboard.html');
+        localStorage.setItem("auth", 1);
     }
 }
