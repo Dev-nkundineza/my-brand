@@ -1,7 +1,7 @@
 'use strict';
 const post = JSON.parse(localStorage.getItem("posts"));
 
-
+console.log(post);
 //truncate the paragraph
 function truncateParagraph(str) {
     if (str.length > 150) {
@@ -14,12 +14,10 @@ function truncateParagraph(str) {
 
 
 function displayArticle(index) {
-    const post = JSON.parse(localStorage.getItem("posts"));
+    // const post = JSON.parse(localStorage.getItem("posts"));
+    // console.log(post)
 
     for (let index = 0; index < post.length; index++) {
-
-        console.log(post[index].body);
-        console.log(post[index].thumbnail);
 
         const blogCard = document.querySelector(".blog-card");
 
@@ -29,9 +27,10 @@ function displayArticle(index) {
         imgdiv.setAttribute('class', 'photo img-1');
         imgdiv.style.backgroundImage = " `url(${post[index].thumbnail})`";
 
-        const img = document.querySelector("#image")
+        const img = document.createElement("img")
         img.setAttribute("src", post[index].thumbnail)
         img.setAttribute("alt", 'no photo');
+        img.style.cssText = "width:100%; height:100%"
         imgdiv.appendChild(img);
         console.log(imgdiv);
         const description = document.createElement("div")
@@ -72,6 +71,7 @@ function displayArticle(index) {
         card.appendChild(imgdiv);
         card.appendChild(description);
         blogCard.appendChild(card);
+        // document.appendChild(blogCard);
 
         // console.log(blogCard);
 

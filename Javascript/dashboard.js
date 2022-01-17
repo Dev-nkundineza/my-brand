@@ -1,10 +1,12 @@
 'use strict';
 
+// fetch data from localstorage
 const posts = JSON.parse(localStorage.getItem("posts"));
 
 
-const tbody = document.querySelector("tbody");
+var tbody = document.querySelector("tbody");
 
+// function to display post from local storage to admin 
 
 function displayPost(index) {
 
@@ -58,7 +60,7 @@ function displayPost(index) {
         publishButton.appendChild(publishIcon);
         publishButton.appendChild(label2);
         td6.appendChild(publishButton);
-        td5.style.cursor = "pointer";
+        td6.style.cursor = "pointer";
 
         // //append td's to tr
 
@@ -84,15 +86,20 @@ function displayPost(index) {
                     posts = JSON.parse(localStorage.getItem("posts"))
                 }
 
-            }
 
+            }
             posts.splice(index, 1);
             localStorage.setItem("posts", JSON.stringify(posts));
 
-            tbody.innerHTML = "";
+            tbody.textContent = "";
             displayPost();
+            location.reload();
+
+
+
 
         }
+
 
         //edit post 
         function editPost() {

@@ -20,7 +20,7 @@ btn = form.elements[2];
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     validateForm();
-    addComment();
+
 })
 
 function validateForm() {
@@ -30,11 +30,15 @@ function validateForm() {
         alert("username is short")
     } else if (commentBody.value.length > 300) {
         alert("the comment is too long")
+    } else {
+        saveComment();
+        addComment();
     }
 }
 
+const ul = document.querySelector("#ul");
 
-function addComment() {
+function saveComment() {
 
     let comment;
 
@@ -53,13 +57,15 @@ function addComment() {
     comment.push(newObj);
     localStorage.setItem("comments", JSON.stringify(comment))
     form.reset();
+    location.reload();
 }
 
-const ul = document.querySelector("#ul");
+
 // comments list
+const allComments = JSON.parse(localStorage.getItem("comments"));
 
 function addComment() {
-    const allComments = JSON.parse(localStorage.getItem("comments"));
+
     console.log(allComments)
 
     for (let index = 0; index < allComments.length; index++) {
@@ -67,9 +73,9 @@ function addComment() {
         const paragraph = document.createElement("P") //
         paragraph.textContent = allComments[index].comment;
         paragraph.style.marginTop = " 20px";
-        const li = document.createElement("li")
-        li.style.display = "block"
+        const li = document.createElement("li");
         const div = document.createElement("div")
+        div.style.marginTop = "15px";
         const thumbsUp = document.createElement("i")
         thumbsUp.setAttribute("class", "icon-thumbs-up")
         const span1 = document.createElement("span")
@@ -82,16 +88,19 @@ function addComment() {
         const span3 = document.createElement("span")
         span3.textContent = "10";
         const span4 = document.createComment("span");
-        span4.innerHTML = `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`;
+
         const hr = document.createElement("hr");
 
         div.append(thumbsUp, span1, span2, thumbsDown, span3, span4)
         li.append(h4, paragraph, div, hr);
+        li.style.fontSize = "18px";
         console.log(li)
-        ul.appendChild(li)
+        ul.prepend(li)
 
 
     }
 }
 
 addComment();
+
+document.querySelector("#no-comments").innerHTML = allComments.length + " " + "comments ";
