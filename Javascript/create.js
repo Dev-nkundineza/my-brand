@@ -3,8 +3,7 @@
 
 const form = document.querySelector("form");
 const input = document.querySelectorAll("input")
-console.log(form);
-console.log(input);
+
 
 //access form elements
 const title = form.elements['title'];
@@ -13,10 +12,29 @@ const filePath = form.elements['file'];
 const date = form.elements['date'];
 const author = form.elements['user'];
 
+var imgUrl;
+
+
+document.querySelector("#imageInput").addEventListener("change", function() {
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+        imgUrl = reader.result;
+
+    })
+    reader.readAsDataURL(this.files[0]);
+})
+
+console.log(`${imgUrl}`);
+
+
+
 
 
 function addPostToLs() {
     let posts;
+
+
+
     if (localStorage.getItem("posts") === null) {
         posts = [];
     } else {
@@ -25,7 +43,7 @@ function addPostToLs() {
     const obj = {
         title: title.value,
         body: body.value,
-        thumbnail: filePath.value,
+        thumbnail: imgUrl,
         date: date.value,
         author: author.value
     }

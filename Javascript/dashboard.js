@@ -9,29 +9,7 @@ const tbody = document.querySelector("tbody");
 function displayPost(index) {
 
     for (let index = 0; index < posts.length; index++) {
-        // const table = document.querySelector("table");
-        // const thead = document.createElement("thead");
-        // const thead1 = document.createElement("th");
-        // thead1.textContent = "N";
-        // const sup = document.createElement("sup");
-        // sup.textContent = "o";
-        // const headtitle = document.createElement("th");
-        // headtitle.textContent = "Title";
 
-        // const date = document.createElement("th");
-        // date.textContent = "Date published";
-        // const action = document.createElement("th");
-        // action.setAttribute("colspan", "3");
-        // action.textContent = "Action";
-
-        // thead1.appendChild(sup);
-        // thead.appendChild(thead1, headtitle, date, action);
-        // thead.appendChild(headtitle);
-        // thead.appendChild(date);
-        // thead.appendChild(action);
-        // table.appendChild(thead);
-
-        // const tbody = document.createElement("tbody");
         const tr = document.createElement("tr");
         const td1 = document.createElement("td");
         td1.textContent = index + 1;

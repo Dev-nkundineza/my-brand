@@ -13,22 +13,26 @@ function truncateParagraph(str) {
 
 
 
-function displayArticle() {
+function displayArticle(index) {
     const post = JSON.parse(localStorage.getItem("posts"));
 
     for (let index = 0; index < post.length; index++) {
 
         console.log(post[index].body);
+        console.log(post[index].thumbnail);
 
         const blogCard = document.querySelector(".blog-card");
 
         const card = document.createElement("div")
         card.setAttribute('class', 'card');
-        const img = document.createElement("div")
-        img.setAttribute('class', 'photo img-1');
-        img.style.backgroundImage = "url(../)"
+        const imgdiv = document.createElement("div")
+        imgdiv.setAttribute('class', 'photo img-1');
 
-        img.textContent = post[index].thumbnail;
+        const img = document.querySelector("#image")
+        img.setAttribute = ('src', post[index].thumbnail)
+        img.setAttribute = ('alt', 'no photo');
+        imgdiv.appendChild(img);
+        console.log(imgdiv);
         const description = document.createElement("div")
         description.setAttribute('class', 'description');
         const thumbs = document.createElement("div")
@@ -54,7 +58,7 @@ function displayArticle() {
         const body = document.createElement("p");
         body.textContent = truncateParagraph(post[index].body);
         const link = document.createElement("a")
-        link.setAttribute('href', 'details.html');
+        link.addEventListener("click", details);
         const btn = document.createElement("button");
         btn.textContent = "Read More";
 
@@ -64,29 +68,20 @@ function displayArticle() {
         description.appendChild(body);
         description.appendChild(link);
 
-        card.appendChild(img);
+        card.appendChild(imgdiv);
         card.appendChild(description);
         blogCard.appendChild(card);
 
-        console.log(card);
+        // console.log(blogCard);
+
+        function details() {
+
+            window.location.assign(`http://127.0.0.1:5502/pages/details.html#${index}`)
+        }
+
     }
 
 
 }
 
 displayArticle();
-
-
-// READING FILES FROM LOCALSTORAGE
-
-// function readFile(inputFile) {
-//     let file = inputFile.files[0];
-//     let fileReader = new FileReader();
-
-//     fileReader.readAsDataURL(file);
-//     fileReader.onload = function() {
-//         return fileReader.results;
-//     };
-// }
-
-// console.log(readFile(post.thumbnail));

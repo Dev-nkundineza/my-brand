@@ -501,7 +501,7 @@ designing the contents to be displayed in body section */
     }
     
     .img-1 {
-        background-image: url('../image/bgcontact.png');
+        /* background-image: url('../image/bgcontact.png'); */
     }
     
     .card .description {
