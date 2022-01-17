@@ -27,10 +27,11 @@ function displayArticle(index) {
         card.setAttribute('class', 'card');
         const imgdiv = document.createElement("div")
         imgdiv.setAttribute('class', 'photo img-1');
+        imgdiv.style.backgroundImage = " `url(${post[index].thumbnail})`";
 
         const img = document.querySelector("#image")
-        img.setAttribute = ('src', post[index].thumbnail)
-        img.setAttribute = ('alt', 'no photo');
+        img.setAttribute("src", post[index].thumbnail)
+        img.setAttribute("alt", 'no photo');
         imgdiv.appendChild(img);
         console.log(imgdiv);
         const description = document.createElement("div")
@@ -40,7 +41,7 @@ function displayArticle(index) {
         icon1.setAttribute('class', 'icon-thumbs-up');
         const span = document.createElement("span");
         const span1 = document.createElement("span")
-        span1.innerHTML = `&nbsp;&nbsp;&nbsp;&nbsp;`
+        span1.style.paddingRight = "20px";
 
         const icon2 = document.createElement("i")
         icon2.setAttribute('class', 'icon-thumbs-down');
