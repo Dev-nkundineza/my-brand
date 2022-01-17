@@ -56,5 +56,6 @@ function addPostToLs() {
     filePath.value = "";
     date.value = "";
     author.value = "";
+    alert("posted successfully!");
 
 }
