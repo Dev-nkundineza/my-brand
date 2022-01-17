@@ -46,13 +46,13 @@ const validateInputs = () => {
     const messageValue = message.value.trim();
 
     if (userNameValue === "") {
-        setError(userName, 'invalid credential');
+        setError(userName, 'invalid input');
     } else {
         setSuccess(userName);
     }
     //check the email validation
     if (emailValue === "") {
-        setError(email, 'invalid credentials');
+        setError(email, 'empty field');
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'email does not exist!');
     } else {
@@ -97,6 +97,7 @@ function myFunction() {
         userName.value = "";
         email.value = "";
         message.value = "";
+        alert("Message sent!")
     }
 
 
