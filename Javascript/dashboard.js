@@ -94,6 +94,7 @@ function displayPost(index) {
             tbody.textContent = "";
             displayPost();
             location.reload();
+            alert("deleted successfull")
 
 
 
