@@ -61,7 +61,9 @@ function addPostToLs() {
         body: body.value,
         thumbnail: imgUrl,
         date: date.value,
-        author: author.value
+        author: author.value,
+        Comments: []
+
     }
 
     posts.push(obj);

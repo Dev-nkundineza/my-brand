@@ -3,7 +3,7 @@ console.log(id);
 let posts = JSON.parse(localStorage.getItem('posts'));
 let post = posts[id];
 
-console.log(post);
+console.log(post.Comments);
 
 document.querySelector("#img").setAttribute("src", post.thumbnail)
 
@@ -40,30 +40,22 @@ function validateForm() {
 const ul = document.querySelector("#ul");
 
 function saveComment() {
-
-    let comment;
-
-    if (localStorage.getItem("comments") === null) {
-        comment = [];
-    } else {
-        comment = JSON.parse(localStorage.getItem("comments"))
-    }
-
     let newObj = {
         name: visitor.value,
         comment: commentBody.value,
 
     }
 
-    comment.push(newObj);
-    localStorage.setItem("comments", JSON.stringify(comment))
+    post.Comments.push(newObj);
+    localStorage.setItem("posts", JSON.stringify(posts))
     form.reset();
     location.reload();
 }
 
 
 // comments list
-const allComments = JSON.parse(localStorage.getItem("comments"));
+const allComments = post.Comments;
+console.log(allComments)
 
 function addComment() {
 
@@ -73,7 +65,7 @@ function addComment() {
         const h4 = document.createElement("h4")
         h4.textContent = allComments[index].name;
 
-        const paragraph = document.createElement("P") //
+        const paragraph = document.createElement("P")
         paragraph.textContent = allComments[index].comment;
         paragraph.style.marginTop = " 20px";
         const li = document.createElement("li");
