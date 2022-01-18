@@ -1,5 +1,8 @@
 const auth = new Auth();
 
 document.querySelector(".logout").addEventListener("click", (e) => {
-    auth.logout();
+    if (confirm("you want to logout?")) {
+        auth.logout();
+    }
+
 })
