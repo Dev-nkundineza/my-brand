@@ -12,7 +12,7 @@ form.addEventListener('submit', (e) => {
 
     validateInputs();
 
-    myFunction();
+
 
 
 })
@@ -65,6 +65,7 @@ const validateInputs = () => {
         setError(message, 'too long message');
     } else {
         setSuccess(message);
+        myFunction();
     }
 };
 
