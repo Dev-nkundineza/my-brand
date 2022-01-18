@@ -1,20 +1,8 @@
-// const mainMenu = document.querySelector('.navbar');
-// const closeMenu = document.querySelector('.closeMenu');
-// const openMenu = document.querySelector('.openMenu');
+const auth = localStorage.getItem("auth");
+if (auth ==  1) {
 
-// openMenu.addEventListener("click ", show);
-// closeMenu.addEventListener("click ", close);
-
-// function show() {
-//     mainMenu.style.display = 'flex';
-//     mainMenu.style.top = '0';
-
-// }
-
-// function close() {
-
-//     mainMenu.style.left = '-100%';
-// }
+    window.location.replace('http://127.0.0.1:5502/pages/dashboard.html');
+}
 
 const navToggler = document.querySelector(".nav-toggler");
 navToggler.addEventListener("click", navToggle);

@@ -1,3 +1,13 @@
+'use strict';
+
+const auth = localStorage.getItem("auth");
+if (auth ==  1) {
+
+    window.location.replace('http://127.0.0.1:5502/pages/dashboard.html');
+
+}
+// get form fields
+
 const form = document.querySelector("#contactForm");
 console.log(form);
 
