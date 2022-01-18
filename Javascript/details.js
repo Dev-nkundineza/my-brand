@@ -33,6 +33,7 @@ function validateForm() {
     } else {
         saveComment();
         addComment();
+        alert("added successfully!");
     }
 }
 
@@ -69,7 +70,9 @@ function addComment() {
     console.log(allComments)
 
     for (let index = 0; index < allComments.length; index++) {
-        const h4 = document.createElement("h4").textContent = allComments[index].name;
+        const h4 = document.createElement("h4")
+        h4.textContent = allComments[index].name;
+
         const paragraph = document.createElement("P") //
         paragraph.textContent = allComments[index].comment;
         paragraph.style.marginTop = " 20px";
@@ -94,7 +97,7 @@ function addComment() {
         div.append(thumbsUp, span1, span2, thumbsDown, span3, span4)
         li.append(h4, paragraph, div, hr);
         li.style.fontSize = "18px";
-        console.log(li)
+
         ul.prepend(li)
 
 

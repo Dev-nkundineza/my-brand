@@ -552,6 +552,11 @@ designing the contents to be displayed in body section */
             margin-bottom: 1.5rem;
         }
         
+        #message {
+            color: white;
+            background-color: green;
+        }
+        
         #detail-section form {
             background-color: transparent !important;
             margin-left: 0%;
