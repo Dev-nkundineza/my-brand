@@ -77,7 +77,7 @@ function displayArticle(index) {
 
         function details() {
 
-            window.location.assign(`http://127.0.0.1:5502/pages/details.html#${index}`)
+            window.location.assign(`../pages/details.html#${index}`)
         }
 
     }

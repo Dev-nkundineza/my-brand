@@ -113,14 +113,14 @@ function addComment() {
         const span3 = document.createElement("span")
         span3.textContent = "0";
         thumbsDown.addEventListener("click", disLike)
-
+        let notclicked = false;
         // add dislike
         function disLike() {
-            if (!clicked) {
-                clicked = true;
+            if (!notclicked) {
+                notclicked = true;
                 span3.textContent++;
             } else {
-                clicked = false;
+                notclicked = false;
                 span3.textContent--;
                 return false;
             }
