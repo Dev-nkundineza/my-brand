@@ -81,15 +81,52 @@ function addComment() {
         div.style.marginTop = "15px";
         const thumbsUp = document.createElement("i")
         thumbsUp.setAttribute("class", "icon-thumbs-up")
+        thumbsUp.addEventListener('click', (e) => {
+            e.preventDefault();
+            addLike();
+
+        })
         const span1 = document.createElement("span")
-        span1.textContent = "10";
+        span1.textContent = "0";
         span1.style.marginRight = "30px";
+        let clicked = false;
+
+        // add like
+        function addLike() {
+            if (!clicked) {
+                clicked = true;
+                span1.textContent++;
+            } else {
+                clicked = false;
+                span1.textContent--;
+                return false;
+            }
+
+
+        }
+
+
         const span2 = document.createComment("span");
-        span2.innerHTML = `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`;
+        // span2.innerHTML = `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`;
         const thumbsDown = document.createElement("i")
         thumbsDown.setAttribute("class", "icon-thumbs-down")
         const span3 = document.createElement("span")
-        span3.textContent = "10";
+        span3.textContent = "0";
+        thumbsDown.addEventListener("click", disLike)
+
+        // add dislike
+        function disLike() {
+            if (!clicked) {
+                clicked = true;
+                span3.textContent++;
+            } else {
+                clicked = false;
+                span3.textContent--;
+                return false;
+            }
+
+
+        }
         const span4 = document.createComment("span");
 
         const hr = document.createElement("hr");
