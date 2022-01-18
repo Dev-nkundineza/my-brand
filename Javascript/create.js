@@ -14,13 +14,13 @@ form.addEventListener("submit", (e) => {
 const title = form.elements['title'];
 const body = form.elements['body'];
 const filePath = form.elements['file'];
-const date = form.elements['date'];
 const author = form.elements['user'];
 var imgUrl;
 
+
 // function to validate create form
 function validateForm() {
-    if (!title.value || !body.value || !filePath.value || !date.value || !author.value) {
+    if (!title.value || !body.value || !filePath.value || !author.value) {
         alert("some field is missing")
         return false;
     } else if (title.value.length < 3 || body.value.length < 10 || author.value < 3) {
@@ -44,7 +44,15 @@ document.querySelector("#imageInput").addEventListener("change", function() {
 })
 
 
+// get time
 
+const timeNow = new Date();
+const year = timeNow.getFullYear();
+const month = `${timeNow.getMonth() + 1}`.padStart(2, 0);
+const date = `${timeNow.getDate()}`.padStart(2, 0);
+const hour = timeNow.getHours();
+const minutes = timeNow.getMinutes();
+//
 
 
 // function of adding a post
@@ -56,11 +64,14 @@ function addPostToLs() {
     } else {
         posts = JSON.parse(localStorage.getItem("posts"));
     }
+
+
+
     const obj = {
         title: title.value,
         body: body.value,
         thumbnail: imgUrl,
-        date: date.value,
+        date: `${date}/${month}/${year},${hour}:${minutes}`,
         author: author.value,
         Comments: []
 
@@ -71,7 +82,6 @@ function addPostToLs() {
     title.value = "";
     body.value = "";
     filePath.value = "";
-    date.value = "";
     author.value = "";
     alert("posted successfully!");
 
