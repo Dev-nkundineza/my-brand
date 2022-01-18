@@ -53,7 +53,7 @@ function updatePost() {
     posts.splice(id, 1, newpost);
     localStorage.setItem("posts", JSON.stringify(posts));
     alert("successfully updated")
-    window.location.replace("http://127.0.0.1:5502/pages/dashboard.html");
+    window.location.replace("../pages/dashboard.html");
     console.log(posts)
 
 }
