@@ -5,12 +5,16 @@ class Auth {
         this.validateAuth(auth);
     }
 
+
     validateAuth(auth) {
 
         if (auth ==  1) {
+
             document.querySelector("body").style.display = 'block'; // window.location.replace('http://127.0.0.1:5502/pages/signin.html');
         } else {
             window.location.replace('http://127.0.0.1:5502/pages/signin.html');
+
+            logout();
         }
     }
 
@@ -19,3 +23,5 @@ class Auth {
         window.location.replace('http://127.0.0.1:5502/pages/signin.html');
     }
 }
+
+console.log("hello")

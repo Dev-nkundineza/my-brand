@@ -1,9 +1,17 @@
 '@import contact.js'
+const auth = localStorage.getItem("auth");
+if (auth ==  1) {
+
+    window.location.replace('http://127.0.0.1:5502/pages/dashboard.html');
+}
+
 const loginForm = document.querySelector('form ');
 
 const user = loginForm.elements[0];
 const password = loginForm.elements[1];
 const element = document.querySelector(".error");
+
+
 
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
