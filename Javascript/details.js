@@ -9,7 +9,7 @@ document.querySelector("#img").setAttribute("src", post.thumbnail)
 
 document.querySelector("h1").innerHTML = post.title;
 document.querySelector("#body").innerHTML = post.body;
-document.querySelector("#publication-date").innerHTML = post.date;
+document.querySelector("#publication-date").innerHTML = `updated: ${post.date};`
 document.querySelector("#author").innerHTML = `By,${post.author}`;
 const form = document.querySelector("form");
 
