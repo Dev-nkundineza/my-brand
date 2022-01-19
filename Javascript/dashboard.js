@@ -9,6 +9,7 @@ var tbody = document.querySelector("tbody");
 function displayPost(index) {
 
     for (let index = 0; index < posts.length; index++) {
+        console.log(posts[index].title);
 
         const tr = document.createElement("tr");
         const td1 = document.createElement("td");
@@ -55,10 +56,30 @@ function displayPost(index) {
         publishIcon.setAttribute("class", "icon-edit-sign");
         const label2 = document.createElement("span");
         label2.textContent = "Publish";
-        publishButton.appendChild(publishIcon);
-        publishButton.appendChild(label2);
-        td6.appendChild(publishButton);
-        td6.style.cursor = "pointer";
+        publishButton.append(publishIcon, label2);
+
+        publishButton.addEventListener("click", () => {
+            console.log("hello");
+            posts[index].status = true;
+            localStorage.setItem("posts", JSON.stringify(posts))
+            alert("successfully published!")
+            location.reload();
+
+            console.log(posts);
+
+
+
+
+
+        })
+        if (posts[index].status === false) {
+            td6.appendChild(publishButton);
+            td6.style.cursor = "pointer";
+        } else {
+            td6.textContent = "published";
+            td6.style.cssText = "color:green";
+        }
+
 
         // //append td's to tr
 
@@ -73,21 +94,21 @@ function displayPost(index) {
         //delete
 
         function deletePost() {
-            let posts;
+            let postTodelete;
 
             const del = confirm("are you sure you want to delete comment?")
 
             if (del === true) {
                 if (localStorage.getItem("posts") === null) {
-                    posts = [];
+                    postTodelete = [];
                 } else {
-                    posts = JSON.parse(localStorage.getItem("posts"))
+                    postTodelete = JSON.parse(localStorage.getItem("posts"))
                 }
 
 
             }
-            posts.splice(index, 1);
-            localStorage.setItem("posts", JSON.stringify(posts));
+            postTodelete.splice(index, 1);
+            localStorage.setItem("posts", JSON.stringify(postTodelete));
 
             tbody.textContent = "";
             displayPost();

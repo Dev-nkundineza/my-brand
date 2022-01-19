@@ -29,9 +29,7 @@ let newTitle = form.elements[0];
 newTitle.value = post.title;
 let newBody = form.elements[1];
 newBody.value = post.body;
-let newDate = form.elements[3];
-newDate.value = post.date;
-let newAuthor = form.elements[4];
+let newAuthor = form.elements[3];
 newAuthor.value = post.author;
 
 let btn = document.querySelector(".submit-button");
@@ -40,13 +38,24 @@ btn.addEventListener('click', updatePost);
 
 //function to update a post
 
+//get current date
+
+const timeNow = new Date();
+const year = timeNow.getFullYear();
+const month = `${timeNow.getMonth() + 1}`.padStart(2, 0);
+const date = `${timeNow.getDate()}`.padStart(2, 0);
+const hour = timeNow.getHours();
+const minutes = timeNow.getMinutes();
+
+// end
+
 function updatePost() {
 
     let newpost = {
         title: newTitle.value,
         body: newBody.value,
         thumbnail: imgUrl,
-        date: newDate.value,
+        date: `${date}/${month}/${year},${hour}:${minutes}`,
         author: newAuthor.value
     }
     let posts = JSON.parse(localStorage.getItem("posts"));
