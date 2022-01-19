@@ -73,7 +73,7 @@ function addPostToLs() {
         thumbnail: imgUrl,
         date: `${date}/${month}/${year},${hour}:${minutes}`,
         author: author.value,
-        status:false,
+        stat: false,
         Comments: []
 
     }

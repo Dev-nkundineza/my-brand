@@ -32,6 +32,9 @@ newBody.value = post.body;
 let newAuthor = form.elements[3];
 newAuthor.value = post.author;
 
+
+
+
 let btn = document.querySelector(".submit-button");
 btn.addEventListener('click', updatePost);
 
@@ -56,13 +59,22 @@ function updatePost() {
         body: newBody.value,
         thumbnail: imgUrl,
         date: `${date}/${month}/${year},${hour}:${minutes}`,
-        author: newAuthor.value
+        author: newAuthor.value,
+        stat: post.stat,
+        Comments: post.Comments,
+
+
+
     }
-    let posts = JSON.parse(localStorage.getItem("posts"));
-    posts.splice(id, 1, newpost);
-    localStorage.setItem("posts", JSON.stringify(posts));
-    alert("successfully updated")
-    window.location.replace("../pages/dashboard.html");
-    console.log(posts)
+    if (!imgUrl) {
+        alert("no image of post")
+    } else {
+        posts.splice(id, 1, newpost);
+        localStorage.setItem("posts", JSON.stringify(posts));
+        alert("successfully updated")
+        window.location.replace("../pages/dashboard.html");
+        console.log(posts)
+    }
+
 
 }

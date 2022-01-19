@@ -60,7 +60,7 @@ function displayPost(index) {
 
         publishButton.addEventListener("click", () => {
             console.log("hello");
-            posts[index].status = true;
+            posts[index].stat = true;
             localStorage.setItem("posts", JSON.stringify(posts))
             alert("successfully published!")
             location.reload();
@@ -72,7 +72,7 @@ function displayPost(index) {
 
 
         })
-        if (posts[index].status === false) {
+        if (posts[index].stat === false) {
             td6.appendChild(publishButton);
             td6.style.cursor = "pointer";
         } else {

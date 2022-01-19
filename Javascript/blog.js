@@ -19,7 +19,7 @@ function displayArticle(index) {
 
     for (let index = 0; index < post.length; index++) {
 
-        if (post[index].status) {
+        if (post[index].stat) {
             const blogCard = document.querySelector(".blog-card");
 
             const card = document.createElement("div")
