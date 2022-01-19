@@ -2,12 +2,6 @@
 
 // fetch data from localstorage
 const posts = JSON.parse(localStorage.getItem("posts"));
-const timeNow = new Date();
-const year = timeNow.getFullYear();
-const month = `${timeNow.getMonth() + 1}`.padStart(2, 0);
-const date = `${timeNow.getDate()}`.padStart(2, 0);
-const hour = timeNow.getHours();
-const minutes = timeNow.getMinutes();
 var tbody = document.querySelector("tbody");
 
 // function to display post from local storage to admin 
@@ -22,7 +16,7 @@ function displayPost(index) {
         const td2 = document.createElement("td");
         td2.textContent = posts[index].title;
         const td3 = document.createElement("td");
-        td3.textContent = `${date}/${month}/${year}, ${hour}:${minutes}`;
+        td3.textContent = posts[index].date;
         const td4 = document.createElement("td");
         const editButton = document.createElement("a");
         editButton.setAttribute("class", "edit");
