@@ -40,19 +40,52 @@ function displayArticle(index) {
             const icon1 = document.createElement("i")
             icon1.setAttribute('class', 'icon-thumbs-up');
             const span = document.createElement("span");
+            span.textContent = "0";
             const span1 = document.createElement("span")
-            span1.style.paddingRight = "20px";
+            span.style.paddingRight = "20px";
+
+            icon1.addEventListener('click', addLike)
+            let clicked = false;
+
+            function addLike() {
+                if (!clicked) {
+                    clicked = true;
+                    span.textContent++;
+                } else {
+                    clicked = false;
+                    span.textContent--;
+                    return false;
+                }
+
+
+            }
+
 
             const icon2 = document.createElement("i")
             icon2.setAttribute('class', 'icon-thumbs-down');
             const span2 = document.createElement("span");
+            span2.textContent = "0";
             thumbs.appendChild(icon1);
             thumbs.appendChild(span);
             thumbs.appendChild(span1);
             thumbs.appendChild(icon2);
 
             thumbs.appendChild(span2);
+            icon2.addEventListener('click', disLike)
+            let notclicked = false;
 
+            function disLike() {
+                if (!notclicked) {
+                    notclicked = true;
+                    span2.textContent++;
+                } else {
+                    notclicked = false;
+                    span2.textContent--;
+                    return false;
+                }
+
+
+            }
             const title = document.createElement("h1");
             title.textContent = post[index].title;
             console.log(title);
