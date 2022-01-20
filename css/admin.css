@@ -1,250 +1,63 @@
-                   * {
-                       margin: 0;
-                       font-size: 24px;
-                   }
-                   
-                   .navbar {
-                       height: 50px;
-                       margin: 0;
-                       background-color: rgba(0, 0, 0);
-                       color: white;
-                   }
-                   
-                   .admin-header {
-                       width: 70%;
-                       height: inherit;
-                       margin: 0% 20% 0% 20%;
-                       display: flex;
-                       justify-content: space-between;
-                       /* font-size: 12px !important; */
-                   }
-                   
-                   .admin-header h4 {
-                       margin-top: 2%;
-                   }
-                   
-                   .admin-header .user {
-                       padding-top: 0%;
-                       padding-right: 15px;
-                       margin-top: 2%;
-                       text-align: center;
-                   }
-                   
-                   .user .admin-header .user span {
-                       margin-left: 5px;
-                       /* font-size: 24px; */
-                   }
-                   
-                   .admin-section {
-                       height: calc(100vh - 50px);
-                       display: flex;
-                       background-color: whitesmoke;
-                   }
-                   
-                   .admin-section .left-side-bar {
-                       flex: 2;
-                       background-color: rgba(0, 0, 0, 0.8);
-                   }
-                   
-                   .admin-section .left-side-bar ul {
-                       list-style: none;
-                       padding: 0;
-                       padding: 18px;
-                       margin-top: 48px;
-                   }
-                   
-                   .admin-section .left-side-bar ul li {
-                       margin-bottom: 15px;
-                       width: 100%;
-                   }
-                   
-                   .admin-section .left-side-bar ul li a {
-                       color: aliceblue;
-                       text-decoration: none;
-                       padding: 3px;
-                       /* font-size: 16px; */
-                       border-bottom: 2px rgb(10, 10, 10) !important;
-                   }
-                   
-                   .admin-section .left-side-bar ul li a:hover {
-                       background-color: aliceblue;
-                       color: #1c1919;
-                   }
-                   
-                   .admin-section .admin-content {
-                       flex: 8;
-                       padding: 20px 100px 100px;
-                       overflow-y: scroll;
-                   }
-                   
-                   .admin-section .admin-content .button-group .btn-bg {
-                       background-color: #1c1919;
-                       color: white;
-                       padding: 10px;
-                       margin: 10px;
-                       border-radius: 10px;
-                       text-decoration: none;
-                       width: 20px;
-                       /* font-size: 16px !important; */
-                   }
-                   
-                   .admin-content .title {
-                       margin-bottom: 17px;
-                       text-align: center;
-                   }
-                   
-                   table {
-                       width: 100%;
-                       border-collapse: collapse;
-                       /* font-size: 24px; */
-                   }
-                   
-                   th,
-                   td {
-                       padding: 15px;
-                       border-bottom: 1px solid black;
-                       text-align: left;
-                   }
-                   
-                   .delete {
-                       color: red;
-                   }
-                   
-                   .edit {
-                       color: green;
-                   }
-                   
-                   .publish {
-                       color: rgb(47, 47, 218);
-                   }
-                   /*.....design of create post page*/
-                   
-                   .admin-content h2 {
-                       text-align: center;
-                       font-weight: bold;
-                       margin-top: 10%;
-                   }
-                   
-                   .admin-content form {
-                       padding-top: 15px;
-                   }
-                   
-                   form div {
-                       margin-bottom: 15px;
-                   }
-                   
-                   .admin-content {
-                       /* font-size: 24px; */
-                   }
-                   
-                   .text-input {
-                       border: 1px solid black;
-                       border-radius: 3px;
-                       width: 80%;
-                       height: 40px;
-                   }
-                   
-                   .date-input {
-                       padding: 5px auto;
-                       border: 1px solid black;
-                       border-radius: 3px;
-                       width: 80%;
-                   }
-                   
-                   .submit-button {
-                       background-color: #1c1919;
-                       color: white;
-                       padding: 10px;
-                       margin: 0px;
-                       border-radius: 10px;
-                       text-decoration: none;
-                       width: 20%;
-                       /* font-size: 16px !important; */
-                   }
-                   /* query content*/
-                   
-                   .query-content h2 {
-                       margin-bottom: 5% !important;
-                   }
-                   
-                   .query-content .query-list {
-                       background-color: aliceblue;
-                   }
-                   
-                   .query-content .query-list ul li {
-                       margin-bottom: 10%;
-                       list-style: none;
-                       margin-left: 0% !important;
-                   }
-                   
-                   .query-content .query-list .action {
-                       margin-top: 2%;
-                   }
-                   
-                   .query-content .query-list .action a {
-                       margin-right: 20px;
-                       margin-bottom: 20px;
-                   }
-                   
-                   .query-content .query-list ul li:nth-child(odd) {
-                       background-color: rgba(128, 128, 128, 0.2);
-                   }
-                   
-                   .paragraph-1 {
-                       width: 80%;
-                       /* background-color: black; */
-                       padding: 2%;
-                   }
-                   
-                   @media(max-width: 800px) {
+                       * {
+                           margin: 0;
+                           font-size: 24px;
+                       }
+                       
                        .navbar {
-                           height: 0px;
+                           height: 50px;
                            margin: 0;
                            background-color: rgba(0, 0, 0);
                            color: white;
                        }
+                       
                        .admin-header {
                            width: 70%;
                            height: inherit;
                            margin: 0% 20% 0% 20%;
-                           display: none;
+                           display: flex;
                            justify-content: space-between;
                            /* font-size: 12px !important; */
-                           margin-top: -100% !important;
                        }
+                       
                        .admin-header h4 {
                            margin-top: 2%;
                        }
+                       
                        .admin-header .user {
                            padding-top: 0%;
                            padding-right: 15px;
                            margin-top: 2%;
                            text-align: center;
                        }
+                       
                        .user .admin-header .user span {
                            margin-left: 5px;
                            /* font-size: 24px; */
                        }
+                       
                        .admin-section {
                            height: calc(100vh - 50px);
-                           display: inline;
+                           display: flex;
                            background-color: whitesmoke;
                        }
+                       
                        .admin-section .left-side-bar {
-                           flex: 1;
+                           flex: 2;
                            background-color: rgba(0, 0, 0, 0.8);
-                           padding-top: 0% !important;
                        }
+                       
                        .admin-section .left-side-bar ul {
                            list-style: none;
                            padding: 0;
-                           padding: 10px;
+                           padding: 18px;
                            margin-top: 48px;
                        }
+                       
                        .admin-section .left-side-bar ul li {
                            margin-bottom: 15px;
                            width: 100%;
                        }
+                       
                        .admin-section .left-side-bar ul li a {
                            color: aliceblue;
                            text-decoration: none;
@@ -252,90 +65,339 @@
                            /* font-size: 16px; */
                            border-bottom: 2px rgb(10, 10, 10) !important;
                        }
+                       
                        .admin-section .left-side-bar ul li a:hover {
-                           background-color: aliceblue;
-                           color: #1c1919;
+                           /* background-color: aliceblue; */
+                           /* color: #1c1919; */
+                           border-bottom: 1px solid rgb(216, 184, 5) !important;
                        }
+                       
                        .admin-section .admin-content {
                            flex: 8;
-                           padding: 30% 5% 0% !important;
-                           /* overflow-y: scroll; */
+                           padding: 20px 100px 100px;
+                           overflow-y: scroll;
                        }
-                       .admin-section .admin-content .button-group {
-                           width: 100% !important;
+                       
+                       .hidden {
+                           display: none;
                        }
+                       
                        .admin-section .admin-content .button-group .btn-bg {
                            background-color: #1c1919;
                            color: white;
-                           padding: 5px auto !important;
-                           margin-left: 10% !important;
+                           padding: 10px;
+                           margin: 10px;
                            border-radius: 10px;
                            text-decoration: none;
-                           width: 100% !important;
-                           font-size: 16px !important;
+                           width: 20px;
+                           /* font-size: 16px !important; */
                        }
+                       
                        .admin-content .title {
                            margin-bottom: 17px;
                            text-align: center;
                        }
+                       
                        table {
-                           width: max-content !important;
+                           width: 100%;
                            border-collapse: collapse;
-                           font-size: 24px;
-                           /* overflow-x: scroll; */
+                           /* font-size: 24px; */
                        }
+                       
                        th,
                        td {
                            padding: 15px;
                            border-bottom: 1px solid black;
                            text-align: left;
                        }
+                       
                        .delete {
                            color: red;
-                           cursor: pointer;
                        }
+                       
                        .edit {
                            color: green;
                        }
+                       
                        .publish {
                            color: rgb(47, 47, 218);
                        }
                        /*.....design of create post page*/
+                       
                        .admin-content h2 {
                            text-align: center;
                            font-weight: bold;
                            margin-top: 10%;
                        }
+                       
                        .admin-content form {
                            padding-top: 15px;
-                           margin-bottom: 20% !important;
                        }
+                       
                        form div {
                            margin-bottom: 15px;
                        }
+                       
                        .admin-content {
-                           font-size: 24px;
+                           /* font-size: 24px; */
                        }
+                       
                        .text-input {
-                           padding: 10% auto !important;
                            border: 1px solid black;
                            border-radius: 3px;
                            width: 80%;
+                           height: 40px;
                        }
+                       
                        .date-input {
                            padding: 5px auto;
                            border: 1px solid black;
                            border-radius: 3px;
                            width: 80%;
                        }
+                       
                        .submit-button {
                            background-color: #1c1919;
                            color: white;
-                           padding: 5px;
+                           padding: 10px;
                            margin: 0px;
                            border-radius: 10px;
                            text-decoration: none;
-                           width: 80%;
-                           font-size: 16px !important;
+                           width: 20%;
+                           /* font-size: 16px !important; */
                        }
-                   }
+                       /* query content*/
+                       
+                       .query-content h2 {
+                           margin-bottom: 5% !important;
+                       }
+                       
+                       .query-content .query-list {
+                           background-color: aliceblue;
+                       }
+                       
+                       .query-content .query-list ul li {
+                           margin-bottom: 10%;
+                           list-style: none;
+                           margin-left: 0% !important;
+                       }
+                       
+                       .query-content .query-list .action {
+                           margin-top: 2%;
+                       }
+                       
+                       .query-content .query-list .action a {
+                           margin-right: 20px;
+                           margin-bottom: 20px;
+                       }
+                       
+                       .query-content .query-list ul li:nth-child(odd) {
+                           background-color: rgba(128, 128, 128, 0.2);
+                       }
+                       
+                       .paragraph-1 {
+                           width: 80%;
+                           /* background-color: black; */
+                           padding: 2%;
+                       }
+                       
+                       .update-profile {
+                           display: block;
+                       }
+                       
+                       .hidden {
+                           display: none;
+                       }
+                       
+                       .close-model {
+                           color: rgb(0, 0, 0);
+                           display: flex;
+                           justify-content: flex-end;
+                           width: 100% !important;
+                           padding: 2%;
+                       }
+                       
+                       .close-model h1 {
+                           float: center;
+                           font-size: 50px;
+                       }
+                       
+                       .profile {
+                           background-color: rgba(0, 0, 0, 0.8);
+                           color: rgb(8, 8, 8);
+                           display: flex;
+                           margin-bottom: 20%;
+                           padding: 2%;
+                           width: 100%;
+                           justify-content: space-around;
+                       }
+                       
+                       .profile form {
+                           display: flex;
+                           flex-direction: column;
+                           background-color: white;
+                           padding: 5%;
+                       }
+                       
+                       .profile form,
+                       input {
+                           margin-bottom: 20px;
+                       }
+                       
+                       .profile .info {
+                           background: rgb(241, 240, 239);
+                           padding: 5% 0%;
+                       }
+                       
+                       .profile .info h2 {
+                           float: left;
+                           margin-bottom: 5%;
+                       }
+                       
+                       .profile .info h3 {
+                           margin-bottom: 10%;
+                       }
+                       
+                       @media(max-width: 800px) {
+                           .navbar {
+                               height: 0px;
+                               margin: 0;
+                               background-color: rgba(0, 0, 0);
+                               color: white;
+                           }
+                           .admin-header {
+                               width: 70%;
+                               height: inherit;
+                               margin: 0% 20% 0% 20%;
+                               display: none;
+                               justify-content: space-between;
+                               /* font-size: 12px !important; */
+                               margin-top: -100% !important;
+                           }
+                           .admin-header h4 {
+                               margin-top: 2%;
+                           }
+                           .admin-header .user {
+                               padding-top: 0%;
+                               padding-right: 15px;
+                               margin-top: 2%;
+                               text-align: center;
+                           }
+                           .user .admin-header .user span {
+                               margin-left: 5px;
+                               /* font-size: 24px; */
+                           }
+                           .admin-section {
+                               height: calc(100vh - 50px);
+                               display: inline;
+                               background-color: whitesmoke;
+                           }
+                           .admin-section .left-side-bar {
+                               flex: 1;
+                               background-color: rgba(0, 0, 0, 0.8);
+                               padding-top: 0% !important;
+                           }
+                           .admin-section .left-side-bar ul {
+                               list-style: none;
+                               padding: 0;
+                               padding: 10px;
+                               margin-top: 48px;
+                           }
+                           .admin-section .left-side-bar ul li {
+                               margin-bottom: 15px;
+                               width: 100%;
+                           }
+                           .admin-section .left-side-bar ul li a {
+                               color: aliceblue;
+                               text-decoration: none;
+                               padding: 3px;
+                               /* font-size: 16px; */
+                               border-bottom: 2px rgb(10, 10, 10) !important;
+                           }
+                           .admin-section .left-side-bar ul li a:hover {
+                               background-color: aliceblue;
+                               color: #1c1919;
+                           }
+                           .admin-section .admin-content {
+                               flex: 8;
+                               padding: 30% 5% 0% !important;
+                               /* overflow-y: scroll; */
+                           }
+                           .admin-section .admin-content .button-group {
+                               width: 100% !important;
+                           }
+                           .admin-section .admin-content .button-group .btn-bg {
+                               background-color: #1c1919;
+                               color: white;
+                               padding: 5px auto !important;
+                               margin-left: 10% !important;
+                               border-radius: 10px;
+                               text-decoration: none;
+                               width: 100% !important;
+                               font-size: 16px !important;
+                           }
+                           .admin-content .title {
+                               margin-bottom: 17px;
+                               text-align: center;
+                           }
+                           table {
+                               width: max-content !important;
+                               border-collapse: collapse;
+                               font-size: 24px;
+                               /* overflow-x: scroll; */
+                           }
+                           th,
+                           td {
+                               padding: 15px;
+                               border-bottom: 1px solid black;
+                               text-align: left;
+                           }
+                           .delete {
+                               color: red;
+                               cursor: pointer;
+                           }
+                           .edit {
+                               color: green;
+                           }
+                           .publish {
+                               color: rgb(47, 47, 218);
+                           }
+                           /*.....design of create post page*/
+                           .admin-content h2 {
+                               text-align: center;
+                               font-weight: bold;
+                               margin-top: 10%;
+                           }
+                           .admin-content form {
+                               padding-top: 15px;
+                               margin-bottom: 20% !important;
+                           }
+                           form div {
+                               margin-bottom: 15px;
+                           }
+                           .admin-content {
+                               font-size: 24px;
+                           }
+                           .text-input {
+                               padding: 10% auto !important;
+                               border: 1px solid black;
+                               border-radius: 3px;
+                               width: 80%;
+                           }
+                           .date-input {
+                               padding: 5px auto;
+                               border: 1px solid black;
+                               border-radius: 3px;
+                               width: 80%;
+                           }
+                           .submit-button {
+                               background-color: #1c1919;
+                               color: white;
+                               padding: 5px;
+                               margin: 0px;
+                               border-radius: 10px;
+                               text-decoration: none;
+                               width: 80%;
+                               font-size: 16px !important;
+                           }
+                       }

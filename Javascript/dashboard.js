@@ -132,3 +132,23 @@ function displayPost(index) {
 
 
 displayPost();
+
+// profile section
+
+
+const profile = document.querySelector("#profile");
+const button = document.querySelector(".update-profile");
+const button2 = document.querySelector("#times");
+button2.style.cursor = "pointer";
+profile.addEventListener("click", () => {
+
+    button.classList.remove('hidden');
+
+
+});
+button2.addEventListener("click", () => {
+
+    button.classList.add('hidden');
+
+
+});
