@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
-    <script defer src="../Javascript/authantication.js"></script>
-    <script defer src="../Javascript/init.js"></script>
     <link rel="stylesheet" href="../css/admin.css">
     <title>Admin</title>
 </head>
@@ -30,26 +28,59 @@
         <!--left side bar-->
         <div class="left-side-bar">
             <ul>
-                <li>
-                    <a href="dashboard.html">Manage posts</a>
+                <li id="manage">
+                    <a href="dashboard.html"><i class="icon-home"></i>&nbsp;&nbsp;&nbsp;Manage posts</a>
                 </li>
                 <li>
-                    <a href="queries.html">Queries</a>
+                    <a href="queries.html">
+                        <i class="icon-comments"></i>&nbsp;&nbsp;&nbsp;<span>Queries</span>
+                    </a>
                 </li>
 
-                <li class="logout">
-                    <a href="signin.html">logout</a>
+
+                <li id="profile">
+                    <a><i class="icon-user"></i>&nbsp;&nbsp;&nbsp;Profile</a>
+                </li>
+
+                <li>
+                    <a href="signin.html"><i class="icon-signout"></i>&nbsp;&nbsp;&nbsp;logout</a>
                 </li>
             </ul>
         </div>
         <!--admin content-->
         <div class=" admin-content ">
-            <div class="button-group">
+            <div class="update-profile  hidden">
+                <div class="close-model">
+                    <h1 id="times">&times;</h1>
+                </div>
+                <div class="profile">
+
+                    <form action="" method="post">
+                        <h2>Update profile</h2>
+                        <label for="username">profile</label>
+                        <input type="image" id="image">
+                        <label for="username">username</label>
+                        <input type="text" name="username" id="user">
+
+                        <label for="username">password</label>
+                        <input type="password" name="password" id="password"> <button type="submit">Save</button>
+                    </form>
+
+                    <div class="info">
+
+                        <h2>profile info</h2>
+                        <h3>profile photo:</h3>
+                        <h3>User:</h3>
+                        <h3>Password:</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="button-group ">
                 <a href="create.html" class="btn-bg">Add Post</a>
                 <a href="dashboard.html" class="btn-bg">Manage Posts</a>
             </div>
 
-            <div class="content">
+            <div class="content ">
 
                 <h2 class="title">Manage Post</h2>
                 <table>
@@ -63,43 +94,7 @@
 
                     </thead>
                     <tbody>
-                        <!-- <tr>
-                            <td>1</td>
-                            <td>The latest tech inventions</td>
-                            <td>15
-                                <SUP>th</SUP>,Dec,2021
-                            </td>
-                            <td>
-                                <a href="update.html" class="edit"> <i class="icon-edit-sign"></i> <span>Edit</span></a>
 
-
-                            </td>
-                            <td>
-                                <a href="#" class="delete"> <i class=" icon-trash "></i> <span>Delete</span></a>
-                            </td>
-                            <td>
-                                <a href="#" class="publish"> <i class=" icon-edit-sign "></i> <span>publish</span></a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>1</td>
-                            <td>The latest tech inventions</td>
-                            <td>15
-                                <SUP>th</SUP>,Dec,2021
-                            </td>
-                            <td>
-                                <a href="update.html" class="edit"> <i class="icon-edit-sign"></i> <span>Edit</span></a>
-
-
-                            </td>
-                            <td>
-                                <a href="#" class="delete"> <i class=" icon-trash "></i> <span>Delete</span></a>
-                            </td>
-                            <td>
-                                <a href="#" class="publish"> <i class=" icon-edit-sign "></i> <span>publish</span></a>
-                            </td>
-                        </tr> -->
                     </tbody>
 
 

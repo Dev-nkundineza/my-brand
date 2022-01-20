@@ -1,37 +1,16 @@
 'use strict';
 
+// fetch data from localstorage
 const posts = JSON.parse(localStorage.getItem("posts"));
-console.log(posts)
+var tbody = document.querySelector("tbody");
 
-console.log(posts[0].body)
+// function to display post from local storage to admin 
 
-
-function displayPost() {
+function displayPost(index) {
 
     for (let index = 0; index < posts.length; index++) {
-        const table = document.querySelector("table");
-        const thead = document.createElement("thead");
-        const thead1 = document.createElement("th");
-        thead1.textContent = "N";
-        const sup = document.createElement("sup");
-        sup.textContent = "o";
-        const headtitle = document.createElement("th");
-        headtitle.textContent = "Title";
+        console.log(posts[index].title);
 
-        const date = document.createElement("th");
-        date.textContent = "Date published";
-        const action = document.createElement("th");
-        action.setAttribute("colspan", "3");
-        action.textContent = "Action";
-
-        thead1.appendChild(sup);
-        thead.appendChild(thead1, headtitle, date, action);
-        // thead.appendChild(headtitle);
-        // thead.appendChild(date);
-        // thead.appendChild(action);
-        // table.appendChild(thead);
-
-        const tbody = document.createElement("tbody");
         const tr = document.createElement("tr");
         const td1 = document.createElement("td");
         td1.textContent = index + 1;
@@ -49,7 +28,9 @@ function displayPost() {
         label.textContent = "Edit";
         editButton.appendChild(editIcon);
         editButton.appendChild(label);
+        editButton.addEventListener("click", editPost)
         td4.appendChild(editButton);
+        td4.style.cursor = "pointer";
         //delete
 
         const td5 = document.createElement("td");
@@ -64,6 +45,7 @@ function displayPost() {
         delButton.appendChild(label1);
         td5.appendChild(delButton);
         td5.addEventListener("click", deletePost)
+        td5.style.cursor = "pointer";
 
         //publish
         const td6 = document.createElement("td");
@@ -74,41 +56,99 @@ function displayPost() {
         publishIcon.setAttribute("class", "icon-edit-sign");
         const label2 = document.createElement("span");
         label2.textContent = "Publish";
-        publishButton.appendChild(publishIcon);
-        publishButton.appendChild(label2);
-        td6.appendChild(publishButton);
+        publishButton.append(publishIcon, label2);
 
-        //append td's to tr
+        publishButton.addEventListener("click", () => {
+            console.log("hello");
+            posts[index].stat = true;
+            localStorage.setItem("posts", JSON.stringify(posts))
+            alert("successfully published!")
+            location.reload();
+
+            console.log(posts);
+
+
+
+
+
+        })
+        if (posts[index].stat === false) {
+            td6.appendChild(publishButton);
+            td6.style.cursor = "pointer";
+        } else {
+            td6.textContent = "published";
+            td6.style.cssText = "color:green";
+        }
+
+
+        // //append td's to tr
 
         tr.append(td1, td2, td3, td4, td5, td6);
 
         tbody.appendChild(tr);
 
-        table.appendChild(tbody);
-        console.log(table);
-    }
-}
 
-displayPost();
+        // table.appendChild(tbody);
 
 
-function deletePost(index) {
-    let posts;
+        //delete
 
-    const del = confirm("are you sure you want to delete comment?")
+        function deletePost() {
+            let postTodelete;
 
-    if (del === true) {
-        if (localStorage.getItem("posts") === null) {
-            posts = [];
-        } else {
-            posts = JSON.parse(localStorage.getItem("posts"))
+            const del = confirm("are you sure you want to delete comment?")
+
+            if (del === true) {
+                if (localStorage.getItem("posts") === null) {
+                    postTodelete = [];
+                } else {
+                    postTodelete = JSON.parse(localStorage.getItem("posts"))
+                }
+
+
+            }
+            postTodelete.splice(index, 1);
+            localStorage.setItem("posts", JSON.stringify(postTodelete));
+
+            tbody.textContent = "";
+            displayPost();
+            location.reload();
+            alert("deleted successfull")
+
+
+
+
+        }
+
+
+        //edit post 
+        function editPost() {
+
+            location.assign(`../pages/update.html#${index}`)
         }
 
     }
-
-    posts.splice(index, 1);
-    localStorage.setItem("posts", JSON.stringify(posts));
-    table.innerHTML = "";
-    displayPost();
-
 }
+
+
+displayPost();
+
+// profile section
+
+
+const profile = document.querySelector("#profile");
+const button = document.querySelector(".update-profile");
+const button2 = document.querySelector("#times");
+button2.style.cursor = "pointer";
+profile.addEventListener("click", () => {
+
+    button.classList.remove('hidden');
+
+
+});
+button2.addEventListener("click", () => {
+
+    button.classList.add('hidden');
+
+
+});
