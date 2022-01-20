@@ -5,6 +5,24 @@ if (auth ==  1) {
     window.location.replace('../pages/dashboard.html');
 }
 
+// credentials
+const account = {
+    username: "admin",
+    passKey: 123,
+}
+
+let accounts;
+if (localStorage.getItem("accounts") === null) {
+    accounts = [];
+} else {
+    accounts = JSON.parse(localStorage.getItem("accounts"))
+}
+
+accounts[0] = account.username;
+accounts[1] = account.passKey;
+localStorage.setItem("accounts", JSON.stringify(accounts));
+
+//
 const loginForm = document.querySelector('form ');
 
 const user = loginForm.elements[0];
@@ -61,10 +79,8 @@ const loginValidation = () => {
 };
 
 function login() {
-    const userName = "admin";
-    const passKey = 123;
 
-    if (user.value != userName || password.value != passKey) {
+    if (user.value != accounts[0] || password.value != accounts[1]) {
         // setError(password, ' password mismatch');
         alert("invalid credentials");
 
