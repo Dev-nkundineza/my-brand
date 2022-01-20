@@ -38,23 +38,27 @@
     <!--Contact form-->
 
     <section id="contact-section">
-        <form action="contact.html" method="post">
+        <form action="" method="post" onsubmit="return false" id="contactForm">
             <div class="title">
                 <h2>Contact Us</h2>
             </div>
             <div class="left">
                 <div class="item">
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="" placeholder="Your Name" />
+                    <input type="text" name="name" placeholder="Your Name" />
+                    <div class="error"></div>
+
                 </div>
                 <div class="item">
                     <label for="email">Email</label>
-                    <input type="email" name="name" id="" placeholder="example@gmail.com" />
+                    <input type="email" name="email" placeholder="example@gmail.com" />
+                    <div class="error"></div>
                 </div>
             </div>
             <div class="full">
                 <label for="message">Message</label>
-                <textarea name="" id=""></textarea>
+                <textarea name=""></textarea>
+                <div class="error"></div>
             </div>
             <div class="action">
                 <input type="submit" value="Submit" />
@@ -62,7 +66,7 @@
         </form>
     </section>
 
-    <script src="../Javascript/main.js"></script>
+    <script src="../Javascript/contact.js"></script>
 </body>
 
 </html>
