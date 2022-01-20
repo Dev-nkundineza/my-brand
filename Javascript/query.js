@@ -14,6 +14,8 @@ function displayItems() {
 
         const li = document.createElement("li");
 
+
+
         const h3 = document.createElement("h3");
         h3.textContent = elem[0] + `:` + val[0];
         const h4 = document.createElement("h4");
