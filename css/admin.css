@@ -63,18 +63,22 @@
                        text-decoration: none;
                        padding: 3px;
                        /* font-size: 16px; */
-                       border-bottom: 2px rgb(10, 10, 10) !important;
                    }
                    
                    .admin-section .left-side-bar ul li a:hover {
-                       background-color: aliceblue;
-                       color: #1c1919;
+                       /* background-color: aliceblue; */
+                       /* color: #1c1919; */
+                       border-bottom: 1px solid rgb(216, 184, 5) !important;
                    }
                    
                    .admin-section .admin-content {
                        flex: 8;
                        padding: 20px 100px 100px;
                        overflow-y: scroll;
+                   }
+                   
+                   .hidden {
+                       display: block;
                    }
                    
                    .admin-section .admin-content .button-group .btn-bg {
