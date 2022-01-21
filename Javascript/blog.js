@@ -1,4 +1,7 @@
 'use strict';
+
+
+
 const post = JSON.parse(localStorage.getItem("posts"));
 
 console.log(post);

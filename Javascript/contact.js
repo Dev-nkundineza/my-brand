@@ -1,11 +1,4 @@
 'use strict';
-
-const auth = localStorage.getItem("auth");
-if (auth ==  1) {
-
-    window.location.replace('../pages/dashboard.html ');
-
-}
 // get form fields
 
 const form = document.querySelector("#contactForm");

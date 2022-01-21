@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <script defer src="../Javascript/authantication.js"></script>
+    <script defer src="../Javascript/init.js"></script>
     <link rel="stylesheet" href="../css/admin.css">
     <title>Admin</title>
 </head>
@@ -17,8 +19,10 @@
     <div class="navbar">
         <div class="admin-header">
             <h4>admin Site</h4>
-            <div class="user"> <i class="icon-user "></i>
-                <span>Admin</span> </div>
+            <div class="user">
+                <img src="" alt="no photo" id="profile-pic">
+                <span id="admin-user"></span>
+            </div>
         </div>
 
     </div>
@@ -42,7 +46,7 @@
                     <a><i class="icon-user"></i>&nbsp;&nbsp;&nbsp;Profile</a>
                 </li>
 
-                <li>
+                <li class="logout">
                     <a href="signin.html"><i class="icon-signout"></i>&nbsp;&nbsp;&nbsp;logout</a>
                 </li>
             </ul>
@@ -55,24 +59,24 @@
                 </div>
                 <div class="profile">
 
-                    <form action="" method="post">
+                    <form action="" method="post" id="form">
                         <h2>Update profile</h2>
-                        <label for="username">profile</label>
-                        <input type="image" id="image">
+                        <div class="img-upload">
+                            <img src="../image/blog1.jpeg" alt="" id="profile-pic">
+                            <input type="file" name="file" id="file">
+                            <label for="file" id="uploadBtn">Choose Photo</label>
+                        </div>
+
+
                         <label for="username">username</label>
                         <input type="text" name="username" id="user">
 
                         <label for="username">password</label>
-                        <input type="password" name="password" id="password"> <button type="submit">Save</button>
+                        <input type="password" name="password" id="password">
+                        <button type="submit" id="save-btn">Save</button>
                     </form>
 
-                    <div class="info">
 
-                        <h2>profile info</h2>
-                        <h3>profile photo:</h3>
-                        <h3>User:</h3>
-                        <h3>Password:</h3>
-                    </div>
                 </div>
             </div>
             <div class="button-group ">

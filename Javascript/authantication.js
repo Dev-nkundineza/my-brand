@@ -12,7 +12,7 @@ class Auth {
 
             document.querySelector("body").style.display = 'block'; // window.location.replace('http://127.0.0.1:5502/pages/signin.html');
         } else {
-            window.location.replace('signin.html');
+            window.location.replace('../index.html');
 
             logout();
         }
@@ -20,7 +20,7 @@ class Auth {
 
     logout() {
         const auth = localStorage.removeItem("auth");
-        window.location.replace('signin.html');
+        window.location.replace('../index.html');
     }
 }
 

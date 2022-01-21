@@ -1,3 +1,5 @@
+"use strict";
+
 let id = location.hash.split('')[1]
 console.log(id);
 let posts = JSON.parse(localStorage.getItem('posts'));
@@ -13,9 +15,11 @@ document.querySelector("#publication-date").innerHTML = `updated: ${post.date};`
 document.querySelector("#author").innerHTML = `By,${post.author}`;
 const form = document.querySelector("form");
 
-visitor = form.elements[0];
-commentBody = form.elements[1];
-btn = form.elements[2];
+const visitor = form.elements[0];
+const commentBody = form.elements[1];
+const btn = form.elements[2];
+
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();

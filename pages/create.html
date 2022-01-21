@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <script defer src="../Javascript/authantication.js"></script>
+    <script defer src="../Javascript/init.js"></script>
     <link rel="stylesheet" href="../css/admin.css">
     <title>Admin- add post</title>
 </head>
@@ -29,14 +31,22 @@
         <!--left side bar-->
         <div class="left-side-bar">
             <ul>
-                <li>
-                    <a href="dashboard.html">Manage posts</a>
+                <li id="manage">
+                    <a href="dashboard.html"><i class="icon-home"></i>&nbsp;&nbsp;&nbsp;Manage posts</a>
                 </li>
                 <li>
-                    <a href="dashboard.html">Queries</a>
+                    <a href="queries.html">
+                        <i class="icon-comments"></i>&nbsp;&nbsp;&nbsp;<span>Queries</span>
+                    </a>
                 </li>
-                <li>
-                    <a href="signin.html">logout</a>
+
+
+                <li id="profile">
+                    <a><i class="icon-user"></i>&nbsp;&nbsp;&nbsp;Profile</a>
+                </li>
+
+                <li class="logout">
+                    <a href="signin.html"><i class="icon-signout"></i>&nbsp;&nbsp;&nbsp;logout</a>
                 </li>
             </ul>
         </div>
@@ -79,6 +89,6 @@
         </div>
 
     </div>
-    <!-- <script src=" https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js "></script> -->
+    <!-- <script src=" https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js "></link> -->
     <script src="../Javascript/create.js "></script>
 </body>
