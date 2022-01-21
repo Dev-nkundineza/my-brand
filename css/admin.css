@@ -6,6 +6,7 @@
            .navbar {
                height: 50px;
                margin: 0;
+               padding: 1%;
                background-color: rgba(0, 0, 0);
                color: white;
            }

@@ -135,12 +135,12 @@ displayPost();
 
 // profile section
 
-
+const credential = JSON.parse(localStorage.getItem("accounts"))
 
 
 //imgdiv
 const imgDiv = document.querySelector('.img-upload');
-const img = document.querySelectorAll('#profile-pic');
+const img = document.querySelector('#profile-pic');
 console.log(img);
 const file = document.querySelector('#file');
 const uploadBtn = document.querySelector('#uploadBtn');
@@ -160,41 +160,39 @@ imgDiv.addEventListener('mouseleave', function() {
 let imgProfile;
 
 file.addEventListener('change', function() {
-    const imgProfile = this.files[0];
+    //this refers to file
+    const choosedFile = this.files[0];
 
-    if (imgProfile) {
+    if (choosedFile) {
 
-        const reader = new FileReader();
+        const reader = new FileReader(); //FileReader is a predefined function of JS
 
         reader.addEventListener('load', function() {
-            img.setAttribute('src', reader.result);
-
-
-            // const getProfile = document.querySelector("#profile-1");
-            // getProfile.setAttribute("src", img2);
-
-            // getProfile.style.cssText = "height:20px"
-            // 
+            img.setAttribute("src", reader.result);
+            console.log("ihi");
+            credential[2] = reader.result;
+            localStorage.setItem("accounts", JSON.stringify(credential));
+            console.log(credential);
         });
 
+        reader.readAsDataURL(choosedFile);
 
-        reader.readAsDataURL(imgProfile);
+
     }
-
-
 });
 
 
 
 const getProfile = document.querySelector("#profile-1");
-// getProfile.setAttribute("src", img2);
+getProfile.style.cssText = "width:40px;height:40px;border-radius:50%;top:0";
+getProfile.setAttribute("src", credential[2]);
 
 //end
 
 
 //ACCOUNTS CREDENTIALS
-const credential = JSON.parse(localStorage.getItem("accounts"))
-console.log(credential);
+
+
 
 const form = document.querySelector("#form");
 form.addEventListener('submit', (e) => {
@@ -219,7 +217,7 @@ function validateForm() {
 function updateProfile() {
     credential[0] = username.value;
     credential[1] = password.value;
-    credential[2] = reader.readAsDataURL(imgProfile);
+    // credential[2] = reader.readAsDataURL(imgProfile);
     localStorage.setItem("accounts", JSON.stringify(credential));
     confirm("confirm updates");
     form.reset();
