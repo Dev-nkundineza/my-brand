@@ -72,6 +72,47 @@ const validateInputs = () => {
     }
 };
 
+
+// get user location
+var userLocation;
+const successCallback = (position) => {
+
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+ ${longitude}&key=3d0e1fbd479240748dbff71203882eed`)
+        .then(response => response.json())
+        .then(response => {
+            let allDetails = response.results[0].components;
+
+            console.table(allDetails);
+
+            let { country, city } = allDetails;
+
+            userLocation = `${country},${city}`;
+
+            return userLocation;
+
+
+        }).catch(() => {
+
+            userLocation = "error occured";
+
+        });
+
+
+};
+const errorCallback = (error) => {
+    console.log(position);
+};
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback)
+
+
+//
+
+
+//
+
 function myFunction() {
 
     let questions;
@@ -83,10 +124,15 @@ function myFunction() {
 
     }
 
+    //get user location
+
+
+
     const obj = {
         name: userName.value,
         email: email.value,
-        message: message.value
+        message: message.value,
+        location: userLocation
     }
 
     if (userName.value === "" || email.value === "" || message.value === "") {
