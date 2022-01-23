@@ -96,7 +96,7 @@ const successCallback = (position) => {
 
         }).catch(() => {
 
-            userLocation = "error occured";
+            userLocation = "no location provided";
 
         });
 
@@ -147,6 +147,7 @@ function myFunction() {
         userName.value = "";
         email.value = "";
         message.value = "";
+        userLocation = userLocation;
         alert("Message sent!")
     }
 
