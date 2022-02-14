@@ -135,7 +135,97 @@ displayPost();
 
 // profile section
 
+const credential = JSON.parse(localStorage.getItem("accounts"))
 
+
+//imgdiv
+const imgDiv = document.querySelector('.img-upload');
+const img = document.querySelector('#profile-pic');
+console.log(img);
+const file = document.querySelector('#file');
+const uploadBtn = document.querySelector('#uploadBtn');
+
+//on mouse hover
+imgDiv.addEventListener('mouseenter', function() {
+    uploadBtn.style.display = "block";
+});
+
+imgDiv.addEventListener('mouseleave', function() {
+    uploadBtn.style.display = "none";
+});
+
+
+//declare a variable for choosen image
+
+let imgProfile;
+
+file.addEventListener('change', function() {
+    //this refers to file
+    const choosedFile = this.files[0];
+
+    if (choosedFile) {
+
+        const reader = new FileReader(); //FileReader is a predefined function of JS
+
+        reader.addEventListener('load', function() {
+            img.setAttribute("src", reader.result);
+            console.log("ihi");
+            credential[2] = reader.result;
+            localStorage.setItem("accounts", JSON.stringify(credential));
+            console.log(credential);
+        });
+
+        reader.readAsDataURL(choosedFile);
+
+
+    }
+});
+
+
+
+const getProfile = document.querySelector("#profile-1");
+getProfile.style.cssText = "width:40px;height:40px;border-radius:50%;top:0";
+getProfile.setAttribute("src", credential[2]);
+
+//end
+
+
+//ACCOUNTS CREDENTIALS
+
+
+
+const form = document.querySelector("#form");
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    validateForm();
+})
+const username = form.elements[1];
+const password = form.elements[2];
+username.value = credential[0];
+password.value = credential[1];
+console.log(typeof username);
+
+function validateForm() {
+    if (!username.value || !password.value) {
+        alert("form is empty!");
+    } else {
+        updateProfile();
+    }
+}
+
+
+function updateProfile() {
+    credential[0] = username.value;
+    credential[1] = password.value;
+    // credential[2] = reader.readAsDataURL(imgProfile);
+    localStorage.setItem("accounts", JSON.stringify(credential));
+    confirm("confirm updates");
+    form.reset();
+    location.reload();
+}
+
+
+// update profile form
 const profile = document.querySelector("#profile");
 const button = document.querySelector(".update-profile");
 const button2 = document.querySelector("#times");
@@ -152,3 +242,9 @@ button2.addEventListener("click", () => {
 
 
 });
+
+
+// name of admin user
+
+
+document.querySelector("#admin-user").textContent = credential[0];

@@ -1,25 +1,11 @@
-'@import contact.js'
-const auth = localStorage.getItem("auth");
-if (auth ==  1) {
-
-    window.location.replace('../pages/dashboard.html');
-}
-
-// credentials
-const account = {
-    username: "admin",
-    passKey: 123,
-}
-
 let accounts;
 if (localStorage.getItem("accounts") === null) {
-    accounts = [];
+    accounts = ["admin", 123];
 } else {
     accounts = JSON.parse(localStorage.getItem("accounts"))
 }
 
-accounts[0] = account.username;
-accounts[1] = account.passKey;
+
 localStorage.setItem("accounts", JSON.stringify(accounts));
 
 //
