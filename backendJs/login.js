@@ -8,10 +8,14 @@ let token = "";
 
 
 
-const logUserIn = async(object) => {
+const logUserIn = async() => {
+    const data = {
+        email: user.value,
+        password: password.value
+    }
     const response = await fetch('https://test-my-brand-api.herokuapp.com/api/v1/user/login', {
-        method: 'POST',
-        body: JSON.stringify(object),
+        method: 'post',
+        body: JSON.stringify(data),
         headers: {
             "Content-Type": "application/json",
         }
@@ -23,11 +27,11 @@ const logUserIn = async(object) => {
         console.log(token)
         token = result.accessToken
         localStorage.setItem("auth", JSON.stringify(token));
-        window.location.replace(`../pages/dashboard.html`)
+        window.location.replace(`../pages/dashboard.html#${data.email}`)
 
     } else {
         alert("invalid credential,Try again")
-
+        console.log("error,")
         user.value = "";
         password.value = "";
         return false;
@@ -41,7 +45,7 @@ loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     loginValidation();
 
-    login();
+    logUserIn();
 })
 
 // function loginValidation() console.log(loginForm);
@@ -83,48 +87,3 @@ const loginValidation = () => {
         setSuccess(password);
     }
 };
-
-
-
-
-const login = async() => {
-
-
-    const data = {
-        email: user.value,
-        password: password.value
-    }
-
-    const res = await fetch('https://test-my-brand-api.herokuapp.com/api/v1/user');
-
-    // const result = await res.json();
-    // console.log(result)
-
-    if (res.status === 200) {
-        logUserIn(data);
-
-    } else {
-        console.log("failed to fetch users")
-    }
-
-}
-
-// function login() {
-
-
-
-//     if (user.value != accounts[0] || password.value != accounts[1]) {
-//         // setError(password, ' password mismatch');
-//         alert("invalid credentials");
-
-//         user.value = "";
-//         password.value = "";
-
-//         return false;
-
-//     } else {
-
-//         window.location.replace('../pages/dashboard.html');
-//         localStorage.setItem("auth", 1);
-//     }
-// }

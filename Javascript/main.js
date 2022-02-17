@@ -1,8 +1,20 @@
 const auth = localStorage.getItem("auth");
-if (auth ==  1) {
+const user = localStorage.getItem("loggedUser");
+const loggedUser = user.replace(/['"]+/g, "");
+const dashboard = document.querySelector("#dashboard")
+dashboard.style.display = 'none'
+if (auth) {
 
-    window.location.replace('../pages/dashboard.html');
+    const signin = document.querySelector("#signin");
+    signin.style.display = 'none'
+    dashboard.style.display = 'inline'
+    dashboard.style.backgroundColor = 'white'
+    dashboard.style.borderRadius = '10'
+    dashboard.style.color = 'black'
+    dashboard.setAttribute("href", `../pages/dashboard.html#${loggedUser}`)
 }
+
+
 
 const navToggler = document.querySelector(".nav-toggler");
 navToggler.addEventListener("click", navToggle);

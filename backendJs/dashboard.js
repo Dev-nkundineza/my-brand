@@ -2,6 +2,9 @@
 // fetch data from database
 const accessToken = localStorage.getItem("auth");
 const token = accessToken.replace(/['"]+/g, "");
+let UserEmail = location.hash.split("#")[1];
+
+console.log(UserEmail);
 
 var tbody = document.querySelector("tbody");
 const getPosts = async() => {
@@ -10,13 +13,10 @@ const getPosts = async() => {
     );
     const result = await response.json();
 
-
     if (response.status === 200) {
         let posts = result.data;
 
         for (let index = 0; index < posts.length; index++) {
-
-
             const deletePost = async() => {
                 const del = confirm("are you sure you want to delete the post?");
                 if (del === true) {
@@ -119,3 +119,139 @@ const getPosts = async() => {
 };
 
 getPosts();
+
+// profile section
+
+const credential = [1, 2, 3, 4];
+
+//imgdiv
+const imgDiv = document.querySelector(".img-upload");
+const img = document.querySelector("#profile-pic");
+const file = document.querySelector("#file");
+const uploadBtn = document.querySelector("#uploadBtn");
+
+//on mouse hover
+imgDiv.addEventListener("mouseenter", function() {
+    uploadBtn.style.display = "block";
+});
+
+imgDiv.addEventListener("mouseleave", function() {
+    uploadBtn.style.display = "none";
+});
+
+//declare a variable for choosen image
+
+let imgProfile;
+
+file.addEventListener("change", function() {
+    //this refers to file
+    const choosedFile = this.files[0];
+
+    if (choosedFile) {
+        const reader = new FileReader(); //FileReader is a predefined function of JS
+
+        reader.addEventListener("load", function() {
+            img.setAttribute("src", reader.result);
+            console.log("ihi");
+            credential[2] = reader.result;
+            localStorage.setItem("accounts", JSON.stringify(credential));
+            console.log(credential);
+        });
+
+        reader.readAsDataURL(choosedFile);
+    }
+});
+
+const form = document.querySelector("#form");
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     validateForm();
+// })
+const username = form.elements[1];
+const email = form.elements[2];
+const password = form.elements[2];
+
+function validateForm() {
+    if (!username.value || !password.value) {
+        alert("form is empty!");
+    } else {
+        updateProfile();
+    }
+}
+
+const getUser = async() => {
+    const response = await fetch(
+        "https://test-my-brand-api.herokuapp.com/api/v1/user", {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        }
+    );
+    const result = await response.json();
+
+
+    if (response.status === 200) {
+        const credential = result.data;
+
+        for (let index = 0; index < credential.length; index++) {
+            if ((credential[index].email = UserEmail)) {
+                localStorage.setItem("loggedUser", JSON.stringify(credential[index].email));
+                const getProfile = document.querySelector("#profile-1");
+                getProfile.style.cssText =
+                    "width:40px;height:40px;border-radius:50%;top:0";
+                document.querySelector("#admin-user").textContent =
+                    credential[index].username;
+                img.setAttribute("src", credential[index].picture);
+                getProfile.setAttribute("src", credential[index].picture);
+                console.log(credential[index].picture);
+                username.value = credential[index].username;
+                email.value = credential[index].email;
+
+                const updateProfile = async() => {
+                    const formData = new FormData(form);
+                    const response = await fetch(
+                        `https://test-my-brand-api.herokuapp.com/api/v1/user/${credential[index]._id}`, {
+                            method: "PATCH",
+                            body: formData,
+                            headers: {
+                                Authorization: `Bearer ${token}`,
+                            },
+                        }
+                    );
+
+                    const result = await response.json();
+
+                    if (response.status === 200) {
+                        console.log(result);
+                        confirm("confirm updates");
+                        form.reset();
+                        location.reload();
+                    } else {
+                        console.log("failed to update user");
+                    }
+                };
+
+                form.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    updateProfile();
+                });
+            } else {
+                console.log("no such user found");
+            }
+        }
+    }
+};
+
+getUser();
+
+// update profile form
+const profile = document.querySelector("#profile");
+const button = document.querySelector(".update-profile");
+const button2 = document.querySelector("#times");
+button2.style.cursor = "pointer";
+profile.addEventListener("click", () => {
+    button.classList.remove("hidden");
+});
+button2.addEventListener("click", () => {
+    button.classList.add("hidden");
+});

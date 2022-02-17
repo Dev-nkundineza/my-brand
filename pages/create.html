@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
-    <script defer src="../Javascript/authantication.js"></script>
+    <script defer src="../backendJs/authantication.js"></script>
     <script defer src="../Javascript/init.js"></script>
     <link rel="stylesheet" href="../css/admin.css">
     <title>Admin- add post</title>
@@ -60,24 +59,24 @@
             <div class="content">
                 <h2>Create Article</h2>
 
-                <form action="create.html" method="post" onsubmit="return false">
+                <form action="create.html" method="post" id="form">
                     <div>
                         <label for="Title">Title</label><br>
-                        <input type="text" name="title" class="text-input" required>
+                        <input type="text" name="title" class="text-input">
                     </div>
                     <div>
-                        <label for="body">Body</label><br>
-                        <textarea name="body" id="body" cols="55" rows="15" required></textarea>
+                        <label for="body">Content</label><br>
+                        <textarea name="content" id="body" cols="55" rows="15"></textarea>
                     </div>
                     <div>
                         <label for="image">Image</label><br>
-                        <input type="file" name="file" class="text-input" id="imageInput" required>
+                        <input type="file" name="image" class="text-input" id="imageInput">
                     </div>
 
 
                     <div>
                         <label for="Date">Author</label><br>
-                        <input type="text" name="user" class="text-input" required>
+                        <input type="text" name="author" class="text-input">
                     </div>
 
                     <div>
@@ -90,5 +89,6 @@
 
     </div>
     <!-- <script src=" https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js "></link> -->
-    <script src="../Javascript/create.js "></script>
+    <!-- <script src="../Javascript/create.js "></script> -->
+    <script src="../backendJs/create.js "></script>
 </body>

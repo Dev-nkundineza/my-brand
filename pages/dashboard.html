@@ -46,9 +46,15 @@
                     <a><i class="icon-user"></i>&nbsp;&nbsp;&nbsp;Profile</a>
                 </li>
 
-                <li class="logout">
-                    <a href="signin.html"><i class="icon-signout"></i>&nbsp;&nbsp;&nbsp;logout</a>
+                <li class="blog">
+                    <a href="./blog.html"><i class="icon-list-alt"></i>&nbsp;&nbsp;&nbsp;Blogs</a>
                 </li>
+
+                <li class="logout">
+                    <a href=""><i class="icon-signout"></i>&nbsp;&nbsp;&nbsp;logout</a>
+                </li>
+
+
             </ul>
         </div>
         <!--admin content-->
@@ -62,14 +68,17 @@
                     <form action="" method="post" id="form">
                         <h2>Update profile</h2>
                         <div class="img-upload">
-                            <img src="../image/blog1.jpeg" alt="" id="profile-pic">
-                            <input type="file" name="file" id="file">
+                            <img src="" alt="picture" id="profile-pic">
+                            <input type="file" name="picture" id="file">
                             <label for="file" id="uploadBtn">Choose Photo</label>
                         </div>
 
 
                         <label for="username">username</label>
-                        <input type="text" name="username" id="user">
+                        <input type="text" name="username" id="username">
+
+                        <label for="username">email</label>
+                        <input type="text" name="email" id="user">
 
                         <label for="username">password</label>
                         <input type="password" name="password" id="password">
@@ -92,7 +101,7 @@
                         <th>N
                             <sup>o</sup></th>
                         <th>Title</th>
-                        <th>Date published</th>
+                        <th>updated at</th>
                         <th colspan="3">Action</th>
 
 
@@ -110,6 +119,7 @@
     </div>
 
     <script src="../backendJs/dashboard.js"></script>
+    <!-- <script src="../jsApi/login.js"></script> -->
 </body>
 
 </html>
