@@ -87,21 +87,40 @@ const getPosts = async() => {
             label2.textContent = "Publish";
             publishButton.append(publishIcon, label2);
 
-            publishButton.addEventListener("click", () => {
-                console.log("hello");
-                posts[index].stat = true;
-                localStorage.setItem("posts", JSON.stringify(posts));
+            td6.addEventListener("click", async() => {
+
+                const obj = {
+                    status: !posts[index].status
+                }
+
+                const response = await fetch(`https://test-my-brand-api.herokuapp.com/api/v1/articles/${posts[index]._id}`, {
+                    method: "PATCH",
+                    body: JSON.stringify(obj),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${token}`,
+                    },
+
+                });
+
+                const result = await response.json();
+                if (response.status === 200) {
+                    console.log(result);
+                }
+
+
                 alert("successfully published!");
                 location.reload();
 
-                console.log(posts);
+
             });
-            if (posts[index].stat === false) {
+            if (posts[index].status === false) {
                 td6.appendChild(publishButton);
                 td6.style.cursor = "pointer";
             } else {
                 td6.textContent = "published";
                 td6.style.cssText = "color:green";
+                td6.style.cursor = "pointer";
             }
 
             // //append td's to tr
@@ -203,7 +222,6 @@ const getUser = async() => {
                     credential[index].username;
                 img.setAttribute("src", credential[index].picture);
                 getProfile.setAttribute("src", credential[index].picture);
-                console.log(credential[index].picture);
                 username.value = credential[index].username;
                 email.value = credential[index].email;
 

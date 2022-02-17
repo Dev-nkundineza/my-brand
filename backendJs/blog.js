@@ -17,7 +17,7 @@ const getArticles = async() => {
 
         for (let index = 0; index < post.length; index++) {
 
-            if (post[index]) {
+            if (post[index].status === true) {
                 const blogCard = document.querySelector(".blog-card");
 
                 const card = document.createElement("div")

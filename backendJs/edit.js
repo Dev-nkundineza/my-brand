@@ -3,7 +3,9 @@ let id = location.hash.split('#')[1]
 console.log(id);
 const accessToken = localStorage.getItem("auth");
 const token = accessToken.replace(/['"]+/g, "");
-console.log(token)
+const user = localStorage.getItem("loggedUser");
+const loggedUser = user.replace(/['"]+/g, "");
+
 
 
 
@@ -29,7 +31,7 @@ const update = async() => {
 
     if (response.status === 200) {
         alert("successfully updated")
-        window.location.replace("../pages/dashboard.html");
+        window.location.replace(`../pages/dashboard.html#${loggedUser}`);
         const result = await response.json();
         console.log(result)
     } else {
