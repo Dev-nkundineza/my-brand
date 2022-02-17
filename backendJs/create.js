@@ -5,6 +5,11 @@ const form = document.getElementById("form");
 const input = document.querySelectorAll("input");
 const accessToken = localStorage.getItem("auth");
 const token = accessToken.replace(/['"]+/g, "");
+const user = localStorage.getItem("loggedUser");
+const loggedUser = user.replace(/['"]+/g, "");
+
+const link = document.getElementById("manage1")
+link.setAttribute('href', `./dashboard.html#${loggedUser}`)
 console.log(token);
 
 form.onsubmit = async(e) => {
