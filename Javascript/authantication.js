@@ -20,6 +20,7 @@ class Auth {
 
     logout() {
         const auth = localStorage.removeItem("auth");
+        localStorage.removeItem("loggedUser");
         window.location.replace('../index.html');
     }
 }
